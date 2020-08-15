@@ -1,0 +1,205 @@
+\documentclass[10pt, compress, notheorems]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsthm, amsmath, mathrsfs, amsfonts, bm}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{mdwlist}
+\usepackage{breqn}
+\usepackage[backend=biber]{biblatex}
+\usepackage{tabulary}
+\usepackage{multirow}
+\usepackage{filecontents}
+\usepackage{comment}
+
+\usefonttheme{serif}
+
+
+
+% \hypersetup{colorlinks=true} % Enable colored hyperlinks
+
+\definecolor{utablue}{RGB}{0,100,177}% Official RGB code for uta blue%{0,68,124}{0,0,0}%
+\definecolor{utaorange}{RGB}{245,128,38} 
+\definecolor{utablue2}{RGB}{0,68,124}
+\definecolor{utablue3}{RGB}{212,239,252}
+\definecolor{utablue4}{RGB}{231,246,253}%R-231 G-246 B-253
+
+\setbeamercolor{palette primary}{bg=utablue2,fg=utablue2}
+\setbeamercolor{palette secondary}{bg=utablue2,fg=white} %footer color
+\setbeamercolor{palette tertiary}{bg=black,fg=utablue2}% header color
+\setbeamercolor{palette quaternary}{bg=utablue2,fg=black}
+\setbeamercolor{structure}{fg=utablue} % itemize, enumerate, etc
+\setbeamercolor{section in toc}{fg=utablue2} % TOC sections
+\setbeamercolor{subsection in toc}{fg=utablue} 
+\setbeamercolor{subsection in head/foot}{bg=utablue2,fg=utablue2}
+\setbeamercolor{block title}{bg=utablue4,fg=black}
+\setbeamercolor{title}{bg=utablue,fg=white}
+
+\setbeamertemplate{enumerate items}[circle] % enumerates each item with a number inside a circle
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamertemplate{section in toc}[circle]
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{frametitle}[default][left]
+\setbeamertemplate{theorems}[numbered] % to number
+\setbeamertemplate{navigation symbols}{\insertslidenavigationsymbol, }
+\setbeamertemplate{background canvas}{
+	\includegraphics[height = \paperheight, width = \paperwidth]{123_Page_04.png}
+}
+\setbeamertemplate{footline}[page number]{}
+\setbeamertemplate{title page}{
+	\vspace{6em}
+	\centering
+	\begin{beamercolorbox}[sep = 10pt, center, rounded = false]{title}
+		\usebeamerfont{title}
+		\inserttitle  
+	\end{beamercolorbox}
+	\vskip 1em \par
+	\begin{beamercolorbox}[sep = 10pt, center]{author}
+		\usebeamerfont{author}
+		\insertauthor
+	\end{beamercolorbox}
+	\begin{beamercolorbox}[sep = 10pt, center]{institute}
+		\usebeamerfont{institute}
+		\insertinstitute
+	\end{beamercolorbox}
+	\vskip 1em \par
+	\begin{beamercolorbox}[sep = 10pt, center]{date}
+		\usebeamerfont{date}
+		\insertdate
+	\end{beamercolorbox}
+}
+
+ \AtBeginSection[]{
+ 	{\setbeamertemplate{background canvas}{\includegraphics[height=\paperheight,width=\paperwidth]{123_Page_02.png}}
+	 	\begin{frame}<beamer>
+	    	\frametitle{Section \thesection}
+	    	\tableofcontents[currentsection, currentsubsection]
+	    \end{frame}
+    }
+}
+
+\begin{document}
+
+\title{Bayesian Hierarchical Dynamic Factor Models}
+     
+\author{
+	Anthony M. Thomas, Jr.\\
+	\footnotesize
+	\href{mailto:anthony.thomas3@mavs.uta.edu}{anthony.thomas3@mavs.uta.edu}
+}
+
+\institute{
+	Department of Mathematics\\ 
+	The University of Texas at Arlington
+}
+
+\date{\today}
+
+{
+\setbeamertemplate{background canvas}{\includegraphics[width=\paperwidth]{UTA-title-page.png}}
+\begin{frame}[plain]
+	\titlepage
+\end{frame}
+}
+
+{
+\setbeamertemplate{background canvas}{\includegraphics[width=\paperwidth]{123_Page_02.png}}
+\begin{frame}[plain]
+\frametitle{Contents}
+\tableofcontents
+\end{frame}
+}
+
+\section{Background}
+\begin{frame}
+	\frametitle{Factor Analysis}
+	\begin{enumerate}
+		\item \textbf{Factor Analysis} is a method that uses the covariances between a set of observed variables to described them in terms of a smaller set of unobservable variables called factors.
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Bayesian Inference}
+	\textbf{Bayesian Inference} can be loosely be described by three parts:
+	\begin{enumerate}
+		\item Build a model based on data $\bm X$ and parameters $\bm \Theta$
+			\begin{itemize}
+				\item Likelihood: $p \left( {\bm X} | {\bm \Theta} \right)$
+				\item Prior: $p \left( {\bm \Theta}\right)$
+			\end{itemize}
+		\item Compute the posterior
+			\begin{itemize}
+				\item Posterior: $p \left( {\bm \Theta} | {\bm X} \right) = p \left( {\bm X} | {\bm \Theta} \right) p \left( {\bm \Theta} \right) / p \left( {\bm X} \right)$
+				\item Report posterior means: $\mathbf{E} \left[ {\bm \Theta} | {\bm X} \right]$
+				\item Report posterior (co)variances: $\mathbf{} \left[ {\bm \Theta} | {\bm X} \right]$
+			\end{itemize}
+		\item Report a summary, e.g.\ posterior means and variances
+	\end{enumerate}
+\end{frame}
+
+\section{Variational Bayesian Inference}
+\begin{frame}
+	\frametitle{What is Variational Bayes?}
+	\begin{enumerate}
+		\item Consider a model with data $\bm X$ and unknowns $\bm Z$. The goal is to compute the posterior $$p \left( {\bm Z} | {\bm X} \right) = \frac{p \left( {\bm X} | {\bm Z} \right) p \left( {\bm Z} \right)}{ p \left( {\bm X} \right) }$$
+		\item For many interesting models $p \left( {\bm Z} | {\bm X} \right)$ either has no closed form or is difficult to compute. 
+		\item Variational Bayes finds an approximation to $p \left( {\bm Z} | {\bm X} \right)$
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Why Variational Bayes?}
+	MCMC methods allow sampling from intractable distributions, but takes too long to run. VB methods are faster.
+\end{frame}
+
+\begin{frame}
+	\frametitle{Variational Bayes}
+	VB turns the inference problem into an 
+\end{frame}
+
+\section{Classical Factor Analysis}
+
+\begin{frame}
+	\frametitle{Classical Factor Analysis Model}	
+	The Classical (orthogonal) FA model assumes assumes the form 
+	\begin{equation*}
+		{\bm X} = {\bm \Lambda} {\bm F}+ {\bm e}
+	\end{equation*}
+	where
+	\begin{enumerate}
+		\item ${\bm X} = \left( X_{1}, \ldots, X_{N} \right)^{\top}$ denotes the vector of observations
+		\item $\bm \Lambda = \left[ \lambda_{nk} \right]_{N \times K}$ denotes the matrix of factor loadings 
+		\item ${\bm F} = \left( F_{1}, \ldots, F_{K} \right)^{\top}$ denotes the vector of latent factors
+		\item ${\bm e} = \left( e_{1}, \ldots, e_{N} \right)^{\top}$ denotes the vector of latent error terms
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Normal Theory Assumptions}
+	The Normal Theory Classical FA model assumes the form
+	\begin{equation*}
+		{\bm X} = {\bm \Lambda} {\bm F}+ {\bm e}
+	\end{equation*}
+	and adds the assumptions that 
+	\begin{enumerate}
+		\item $\bm F \sim \mathcal N \left( \bm 0, \bm{I}_K \right)$
+		\item $\bm e \sim \mathcal N \left( \bm 0, \bm \Sigma \right)$ where $\bm \Sigma = \operatorname{diag} \left( \sigma_1^2, \ldots, \sigma_N^2 \right)$
+		\item $F_k$ and $e_n$ are independent for every pair $k, n$
+	\end{enumerate}
+\end{frame}
+
+\section{Hierarchical Dynamic Factor Analysis}
+\subsection{Dynamic Factor Analysis}
+
+\begin{frame}
+	\frametitle{Hierarchical Dynamic Factor Model}
+	\begin{align}
+	{\bf X}_{bst} &= {\bm \Lambda}_{H.bs} (L) {\bf H}_{bst} + {\bf e}_{Xbst} \\
+	{\bf H}_{bst} &= {\bm \Lambda}_{G.bs} (L) {\bf G}_{bt} + {\bf e}_{Hbst} \\
+	{\bf G}_{bt} &= {\bm \Lambda}_{F.b} (L) {\bf F}_{t} + {\bf e}_{Gbt} \\
+	{\bm \Psi}_{F} (L) {\bf F}_{t} &= {\bm \epsilon}_{Ft},
+\end{align}
+\end{frame}
+
+\end{document}
