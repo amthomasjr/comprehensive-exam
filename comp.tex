@@ -15,11 +15,13 @@
 
 \usefonttheme{serif}
 
-
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
 
 % \hypersetup{colorlinks=true} % Enable colored hyperlinks
 
-\definecolor{utablue}{RGB}{0,100,177}% Official RGB code for uta blue%{0,68,124}{0,0,0}%
+\definecolor{utablue}{RGB}{0,100,177}% Official RGB code for UTA blue 
 \definecolor{utaorange}{RGB}{245,128,38} 
 \definecolor{utablue2}{RGB}{0,68,124}
 \definecolor{utablue3}{RGB}{212,239,252}
@@ -121,7 +123,7 @@
 
 \begin{frame}
 	\frametitle{Bayesian Inference}
-	\textbf{Bayesian Inference} can be loosely be described by three parts:
+	\textbf{Bayesian Inference} can be described by three parts:
 	\begin{enumerate}
 		\item Build a model based on data $\bm X$ and parameters $\bm \Theta$
 			\begin{itemize}
@@ -131,20 +133,41 @@
 		\item Compute the posterior
 			\begin{itemize}
 				\item Posterior: $p \left( {\bm \Theta} | {\bm X} \right) = p \left( {\bm X} | {\bm \Theta} \right) p \left( {\bm \Theta} \right) / p \left( {\bm X} \right)$
-				\item Report posterior means: $\mathbf{E} \left[ {\bm \Theta} | {\bm X} \right]$
-				\item Report posterior (co)variances: $\mathbf{} \left[ {\bm \Theta} | {\bm X} \right]$
 			\end{itemize}
-		\item Report a summary, e.g.\ posterior means and variances
+		\item Report summaries
+		 	\begin{itemize}
+		 		\item Posterior mean: $\E \left[ {\bm \Theta} | {\bm X} \right]$
+		 		\item Posterior (co)variances: $\Var \left[ {\bm \Theta} | {\bm X} \right]$
+		 	\end{itemize}
 	\end{enumerate}
 \end{frame}
 
 \section{Variational Bayesian Inference}
 \begin{frame}
-	\frametitle{What is Variational Bayes?}
+	\frametitle{Why Variational Bayesian Inference?}
+	Consider a model with data $\bm X$ and unknowns $\bm Z$. 
+	The goal is to compute the posterior 
+	\begin{equation}
+		p \left( {\bm Z} | {\bm X} \right) = \frac{ p \left( {\bm X} | {\bm Z} \right) p \left( {\bm Z} \right) }{ p \left( {\bm X} \right) }
+	\end{equation}
+	and report posterior means and covariances.
 	\begin{enumerate}
-		\item Consider a model with data $\bm X$ and unknowns $\bm Z$. The goal is to compute the posterior $$p \left( {\bm Z} | {\bm X} \right) = \frac{p \left( {\bm X} | {\bm Z} \right) p \left( {\bm Z} \right)}{ p \left( {\bm X} \right) }$$
-		\item For many interesting models $p \left( {\bm Z} | {\bm X} \right)$ either has no closed form or is difficult to compute. 
-		\item Variational Bayes finds an approximation to $p \left( {\bm Z} | {\bm X} \right)$
+		\item 
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Why Variational Bayesian Inference?}
+	Consider a model with data $\bm X$ and unknowns $\bm Z$. 
+	The goal is to compute the posterior 
+	\begin{equation}
+		p \left( {\bm Z} | {\bm X} \right) = \frac{ p \left( {\bm X} | {\bm Z} \right) p \left( {\bm Z} \right) }{ p \left( {\bm X} \right) }
+	\end{equation}
+	and report posterior means and covariances.
+	\begin{enumerate}
+		\item 
+		\item For many interesting models $p \left( {\bm Z} | {\bm X} \right)$ either has no closed form or is difficult to compute
+		\item The gold standard is to use MCMC
 	\end{enumerate}
 \end{frame}
 
