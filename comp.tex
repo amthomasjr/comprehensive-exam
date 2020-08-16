@@ -130,50 +130,58 @@
 				\item Likelihood: $p \left( {\bm X} | {\bm \Theta} \right)$
 				\item Prior: $p \left( {\bm \Theta}\right)$
 			\end{itemize}
-		\item Compute the posterior
+		\item Compute the posterior pdf
 			\begin{itemize}
-				\item Posterior: $p \left( {\bm \Theta} | {\bm X} \right) = p \left( {\bm X} | {\bm \Theta} \right) p \left( {\bm \Theta} \right) / p \left( {\bm X} \right)$
+				\item Posterior: $$p \left( {\bm \Theta} | {\bm X} \right) = \frac{ p \left( {\bm X} | {\bm \Theta} \right) p \left( {\bm \Theta} \right) }{ p \left( {\bm X} \right)}$$
 			\end{itemize}
-		\item Report summaries
-		 	\begin{itemize}
-		 		\item Posterior mean: $\E \left[ {\bm \Theta} | {\bm X} \right]$
-		 		\item Posterior (co)variances: $\Var \left[ {\bm \Theta} | {\bm X} \right]$
-		 	\end{itemize}
+		\item Report summaries, e.g. posterior expectations
+		$$\E \left[ h( {\bm \Theta} ) | {\bm X} \right]$$
 	\end{enumerate}
 \end{frame}
 
 \section{Variational Bayesian Inference}
+
 \begin{frame}
 	\frametitle{Why Variational Bayesian Inference?}
-	Consider a model with data $\bm X$ and unknowns $\bm Z$. 
-	The goal is to compute the posterior 
-	\begin{equation}
-		p \left( {\bm Z} | {\bm X} \right) = \frac{ p \left( {\bm X} | {\bm Z} \right) p \left( {\bm Z} \right) }{ p \left( {\bm X} \right) }
-	\end{equation}
-	and report posterior means and covariances.
-	\begin{enumerate}
-		\item 
-	\end{enumerate}
+	\begin{itemize}
+  		\item Consider a model with data $\bm X$ and unknowns $\bm Z$
+  		\item The goal is to compute the posterior 
+  		\begin{equation} \label{posterior}
+  			p \left( {\bm Z} | {\bm X} \right) = \frac{ p \left( {\bm X} | {\bm Z} \right) p \left( {\bm Z} \right) }{ p \left( {\bm X} \right) }
+  		\end{equation}
+		and report posterior expectations
+		\begin{equation} 
+			\E \left[ h ( {\bm Z} ) | {\bm X} \right] = \int h ( {\bm Z} ) p \left( {\bm Z} | {\bm X} \right) \,d{\bm Z} \label{posterior.expectation}
+		\end{equation}
+
+		\item The term in the denominator is called the evidence 
+		\begin{equation} 			
+			p \left( {\bm X} \right) = \int p \left( {\bm X}, {\bm Z} \right) \, d{\bm Z} \label{marginal.evidence}
+		\end{equation}
+	\end{itemize}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Why Variational Bayesian Inference?}
-	Consider a model with data $\bm X$ and unknowns $\bm Z$. 
-	The goal is to compute the posterior 
-	\begin{equation}
-		p \left( {\bm Z} | {\bm X} \right) = \frac{ p \left( {\bm X} | {\bm Z} \right) p \left( {\bm Z} \right) }{ p \left( {\bm X} \right) }
-	\end{equation}
-	and report posterior means and covariances.
+	\begin{itemize}
+		\item For most interesting models $\bm Z$ is high-dimensional
+		\item (\ref{posterior.expectation}) and (\ref{marginal.evidence}) would require high-dimensional integration
+		\item (\ref{posterior}), (\ref{posterior.expectation}), and (\ref{marginal.evidence}) are typically analytically intractable
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Why Variational Bayesian Inference?}
 	\begin{enumerate}
+		\item The gold standard has been to use MCMC algorithms
+		\item MCMC methods allow sampling from intractable distributions
 		\item 
-		\item For many interesting models $p \left( {\bm Z} | {\bm X} \right)$ either has no closed form or is difficult to compute
-		\item The gold standard is to use MCMC
 	\end{enumerate}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Why Variational Bayes?}
-	MCMC methods allow sampling from intractable distributions, but takes too long to run. VB methods are faster.
+	, but takes too long to run. VB methods are faster.
 \end{frame}
 
 \begin{frame}
