@@ -15,9 +15,16 @@
 
 \usefonttheme{serif}
 
+\let\originalleft\left
+\let\originalright\right
+\renewcommand{\left}{\mathopen{}\mathclose \bgroup \originalleft}
+\renewcommand{\right}{\aftergroup \egroup \originalright}
+
 \newcommand{\E}{\mathrm{E}}
 \newcommand{\Var}{\mathrm{Var}}
 \newcommand{\Cov}{\mathrm{Cov}}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
 
 % \hypersetup{colorlinks=true} % Enable colored hyperlinks
 
@@ -123,19 +130,21 @@
 
 \begin{frame}
 	\frametitle{Bayesian Inference}
-	\textbf{Bayesian Inference} can be described by three parts:
+	\textbf{Bayesian Inference} can be described by two parts:
 	\begin{enumerate}
-		\item Build a model based on data $\bm X$ and parameters $\bm \Theta$
+		\item Build a model based on data $\bm X$ and parameters $\bm \Theta = \left\{ {\bm \Theta}_1, {\bm \Theta}_2 \right\}$
 			\begin{itemize}
 				\item Likelihood: $p \left( {\bm X} | {\bm \Theta} \right)$
 				\item Prior: $p \left( {\bm \Theta}\right)$
 			\end{itemize}
-		\item Compute the posterior pdf
+		\item Compute the posterior
 			\begin{itemize}
 				\item Posterior: $$p \left( {\bm \Theta} | {\bm X} \right) = \frac{ p \left( {\bm X} | {\bm \Theta} \right) p \left( {\bm \Theta} \right) }{ p \left( {\bm X} \right)}$$
+				\item Can report summaries, e.g. posterior expectations
+				$$\E \left[ h( {\bm \Theta} ) | {\bm X} \right]$$
+				and compute marginal posteriors
+				$$p \left( {\bm \Theta}_1 | {\bm X} \right) \text{ and } p \left( {\bm \Theta}_2 | {\bm X} \right)$$
 			\end{itemize}
-		\item Report summaries, e.g. posterior expectations
-		$$\E \left[ h( {\bm \Theta} ) | {\bm X} \right]$$
 	\end{enumerate}
 \end{frame}
 
@@ -143,50 +152,92 @@
 
 \begin{frame}
 	\frametitle{Why Variational Bayesian Inference?}
-	\begin{itemize}
-  		\item Consider a model with data $\bm X$ and unknowns $\bm Z$
-  		\item The goal is to compute the posterior 
+	Consider a model with data $\bm X$ and unknowns $\bm Z = \left\{ {\bm Z}_1, {\bm Z}_2 \right\}$ (could be latent variables and model parameters).
+  		The goal is to compute the joint posterior of the unknowns given the data
   		\begin{equation} \label{posterior}
   			p \left( {\bm Z} | {\bm X} \right) = \frac{ p \left( {\bm X} | {\bm Z} \right) p \left( {\bm Z} \right) }{ p \left( {\bm X} \right) }
   		\end{equation}
-		and report posterior expectations
-		\begin{equation} 
-			\E \left[ h ( {\bm Z} ) | {\bm X} \right] = \int h ( {\bm Z} ) p \left( {\bm Z} | {\bm X} \right) \,d{\bm Z} \label{posterior.expectation}
-		\end{equation}
-
-		\item The term in the denominator is called the evidence 
-		\begin{equation} 			
-			p \left( {\bm X} \right) = \int p \left( {\bm X}, {\bm Z} \right) \, d{\bm Z} \label{marginal.evidence}
-		\end{equation}
-	\end{itemize}
+  		\begin{itemize}
+  			\item Likelihood: $p \left( {\bm X} | {\bm Z} \right)$
+			\item Prior: $p \left( {\bm Z}\right)$
+			\item Evidence: $p \left( {\bm X} \right)$
+			\begin{equation} 			
+				p \left( {\bm X} \right) = \int p \left( {\bm X}, {\bm Z} \right) \, d{\bm Z} \label{marginal.evidence}
+			\end{equation}
+		\end{itemize}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Why Variational Bayesian Inference?}
-	\begin{itemize}
-		\item For most interesting models $\bm Z$ is high-dimensional
-		\item (\ref{posterior.expectation}) and (\ref{marginal.evidence}) would require high-dimensional integration
-		\item (\ref{posterior}), (\ref{posterior.expectation}), and (\ref{marginal.evidence}) are typically analytically intractable
-	\end{itemize}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Why Variational Bayesian Inference?}
+	For complex models (\ref{posterior}) and (\ref{marginal.evidence}) typically have no closed-form.
+	As a result, the joint and marginal posteriors have to be approximated.
+	Markov chain Monte Carlo (MCMC) has been the gold standard to solve this problem.
 	\begin{enumerate}
-		\item The gold standard has been to use MCMC algorithms
-		\item MCMC methods allow sampling from intractable distributions
-		\item 
+		\item Construct an ergodic Markov chain on $\bm Z$ whose stationary distribution is the joint posterior $p \left( {\bm Z} | {\bm X} \right)$
+		\item Sample from the chain to collect samples from the stationary distribution
+		\item Approximate the posterior with an empirical estimate constructed from a subset of the collected samples
+		\item Use the subset of collected samples to estimate expectations of interest
 	\end{enumerate}
 \end{frame}
 
 \begin{frame}
-	\frametitle{Why Variational Bayes?}
-	, but takes too long to run. VB methods are faster.
+	\frametitle{Why Variational Bayesian Inference?}
+	A major disadvantage for MCMC is that high levels of accuracy requires a great deal of time
+	\begin{enumerate}
+		\item MCMC is typically slow, but ultimately accurate
+		\item VB is typically much faster
+	\end{enumerate}
 \end{frame}
 
 \begin{frame}
-	\frametitle{Variational Bayes}
-	VB turns the inference problem into an 
+	\frametitle{Variational Bayesian Inference}
+	Rather than use sampling, VB uses optimization to find an approximation to the posterior.
+	\begin{enumerate}
+		\item Posit a family of ``nice" approximate densities $\mathcal Q$
+		\item Find a member of that family that is ``closest" to the exact posterior, i.e.
+		\begin{equation}
+			q^{\star} \left( {\bm Z} \right) = \argmin_{q \left( {\bm Z} \right) \in \mathcal Q} \text{KL} \left( q \left( {\bm Z} \right) \, || \, p \left( {\bm Z} | {\bm X} \right) \right) \label{objective}
+		\end{equation}
+		where 
+		\begin{equation}
+			\text{KL} \left( q \left( {\bm Z} \right) \, || \, p \left( {\bm Z} | {\bm X} \right) \right) = \E_q \left[ \log q \left( {\bm Z} \right)\right] - \E_q \left[ \log p \left( {\bm Z} | {\bm X} \right) \right]
+		\end{equation}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Variational Bayesian Inference}
+	It can be shown that 
+	\begin{equation*}
+		\text{KL} \left( q \left( {\bm Z} \right) \, || \, p \left( {\bm Z} | {\bm X} \right) \right) = \E_q \left[ \log q \left( {\bm Z} \right)\right] - \E_q \left[ \log p \left( {\bm X}, {\bm Z} \right) \right] + \log p \left( {\bm X} \right)
+	\end{equation*}
+	This reveals that the objective in (\ref{objective}) depends on the evidence, thus it cannot be computed directly.
+\end{frame}
+
+\begin{frame}
+	\frametitle{Variational Bayesian Inference}
+	Instead, we optimize an alternative objective that is equivalent to (\ref{objective}) up to an added constant called the \textbf{evidence lower bound} (ELBO)
+	\begin{equation}
+		\text{ELBO} \left( q \right) = \E_q \left[ \log p \left( {\bm X}, {\bm Z} \right) \right] -\E_q \left[ \log q \left( {\bm Z} \right)\right]	
+		\end{equation}
+	Maximizing the ELBO is equivalent to (\ref{objective}).
+\end{frame}
+
+\begin{frame}
+	\frametitle{Variational Bayesian Inference}
+	The VB framework is now
+	\begin{enumerate}
+		\item Posit a family of ``nice" approximate densities $\mathcal Q$
+		\item Find a member of that family that is ``closest" to the exact posterior, i.e.
+		\begin{equation}
+			q^{\star} \left( {\bm Z} \right) = \argmax_{q \left( {\bm Z} \right) \in \mathcal Q} \text{ELBO} \left( q \right) \label{new.objective}
+		\end{equation}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Mean-Field Assumption}
+	
 \end{frame}
 
 \section{Classical Factor Analysis}

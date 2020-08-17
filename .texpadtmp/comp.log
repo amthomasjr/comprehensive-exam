@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.8)  16 AUG 2020 15:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.8)  17 AUG 2020 04:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -914,22 +914,22 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (/Users/anthonythomasjr/OneDrive - University of Texas at Arlington/Research Project/BHDFM/comprehensive-exam/.texpadtmp/comp.aux)
 \openout1 = `comp.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -985,7 +985,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 )) ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box83
-Package hyperref Info: Link coloring OFF on input line 84.
+Package hyperref Info: Link coloring OFF on input line 91.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  (/usr/local/texlive/2020/texmf-dist/tex/latex/refcount/refcount.sty
@@ -995,9 +995,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count464
 )
-LaTeX Info: Redefining \ref on input line 84.
-LaTeX Info: Redefining \pageref on input line 84.
-LaTeX Info: Redefining \nameref on input line 84.
+LaTeX Info: Redefining \ref on input line 91.
+LaTeX Info: Redefining \pageref on input line 91.
+LaTeX Info: Redefining \nameref on input line 91.
  (/Users/anthonythomasjr/OneDrive - University of Texas at Arlington/Research Project/BHDFM/comprehensive-exam/.texpadtmp/comp.out) (/Users/anthonythomasjr/OneDrive - University of Texas at Arlington/Research Project/BHDFM/comprehensive-exam/.texpadtmp/comp.out)
 \@outlinefile=\write7
 \openout7 = `comp.out'.
@@ -1028,157 +1028,163 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'comp.bbl' found.
  (/Users/anthonythomasjr/OneDrive - University of Texas at Arlington/Research Project/BHDFM/comprehensive-exam/.texpadtmp/comp.bbl)
-Package biblatex Info: Reference section=0 on input line 84.
-Package biblatex Info: Reference segment=0 on input line 84.
+Package biblatex Info: Reference section=0 on input line 91.
+Package biblatex Info: Reference segment=0 on input line 91.
  (/Users/anthonythomasjr/OneDrive - University of Texas at Arlington/Research Project/BHDFM/comprehensive-exam/.texpadtmp/comp.nav)
 
 Package hyperref Warning: Option `pdfauthor' has already been used,
-(hyperref)                setting the option has no effect on input line 92.
+(hyperref)                setting the option has no effect on input line 99.
 
 <UTA-title-page.png, id=34, 722.7pt x 542.025pt>
 File: UTA-title-page.png Graphic file (type png)
 <use UTA-title-page.png>
-Package pdftex.def Info: UTA-title-page.png  used on input line 105.
+Package pdftex.def Info: UTA-title-page.png  used on input line 112.
 (pdftex.def)             Requested size: 364.19536pt x 273.14565pt.
 [1
 
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./UTA-title-page.png>] (/Users/anthonythomasjr/OneDrive - University of Texas at Arlington/Research Project/BHDFM/comprehensive-exam/.texpadtmp/comp.toc)
-<123_Page_02.png, id=48, 722.7pt x 542.025pt>
+<123_Page_02.png, id=54, 722.7pt x 542.025pt>
 File: 123_Page_02.png Graphic file (type png)
 <use 123_Page_02.png>
-Package pdftex.def Info: 123_Page_02.png  used on input line 113.
+Package pdftex.def Info: 123_Page_02.png  used on input line 120.
 (pdftex.def)             Requested size: 364.19536pt x 273.14565pt.
  [2
 
  <./123_Page_02.png>] (/Users/anthonythomasjr/OneDrive - University of Texas at Arlington/Research Project/BHDFM/comprehensive-exam/.texpadtmp/comp.toc)
 File: 123_Page_02.png Graphic file (type png)
 <use 123_Page_02.png>
-Package pdftex.def Info: 123_Page_02.png  used on input line 116.
+Package pdftex.def Info: 123_Page_02.png  used on input line 123.
 (pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
  [3
 
 ]
-<123_Page_04.png, id=66, 722.7pt x 542.025pt>
+<123_Page_04.png, id=82, 722.7pt x 542.025pt>
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 122.
+Package pdftex.def Info: 123_Page_04.png  used on input line 129.
 (pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
  [4
 
  <./123_Page_04.png>]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 140.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 149.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 140.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 149.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 140.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 149.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 140.
+LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 149.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mathkerncmss.
 )
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 140.
+Package pdftex.def Info: 123_Page_04.png  used on input line 149.
 (pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
  [5
 
 ] (/Users/anthonythomasjr/OneDrive - University of Texas at Arlington/Research Project/BHDFM/comprehensive-exam/.texpadtmp/comp.toc)
 File: 123_Page_02.png Graphic file (type png)
 <use 123_Page_02.png>
-Package pdftex.def Info: 123_Page_02.png  used on input line 142.
+Package pdftex.def Info: 123_Page_02.png  used on input line 151.
 (pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
  [6
 
 ]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 162.
+Package pdftex.def Info: 123_Page_04.png  used on input line 168.
 (pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
  [7
 
 ]
-
-LaTeX Warning: Reference `posterior.expectation' on page 8 undefined on input line 171.
-
-
-LaTeX Warning: Reference `marginal.evidence' on page 8 undefined on input line 171.
-
-
-LaTeX Warning: Reference `posterior' on page 8 undefined on input line 171.
-
-
-LaTeX Warning: Reference `posterior.expectation' on page 8 undefined on input line 171.
-
-
-LaTeX Warning: Reference `marginal.evidence' on page 8 undefined on input line 171.
-
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 171.
+Package pdftex.def Info: 123_Page_04.png  used on input line 181.
 (pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
-[8
-
-]
-File: 123_Page_04.png Graphic file (type png)
-<use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 180.
-(pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
- [9
-
-]
-File: 123_Page_04.png Graphic file (type png)
-<use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 185.
-(pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
- [10
+ [8
 
 ]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
 Package pdftex.def Info: 123_Page_04.png  used on input line 190.
 (pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
+ [9
+
+]
+File: 123_Page_04.png Graphic file (type png)
+<use 123_Page_04.png>
+Package pdftex.def Info: 123_Page_04.png  used on input line 206.
+(pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
+ [10
+
+]
+File: 123_Page_04.png Graphic file (type png)
+<use 123_Page_04.png>
+Package pdftex.def Info: 123_Page_04.png  used on input line 215.
+(pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
  [11
 
-] (/Users/anthonythomasjr/OneDrive - University of Texas at Arlington/Research Project/BHDFM/comprehensive-exam/.texpadtmp/comp.toc)
-File: 123_Page_02.png Graphic file (type png)
-<use 123_Page_02.png>
-Package pdftex.def Info: 123_Page_02.png  used on input line 192.
+]
+File: 123_Page_04.png Graphic file (type png)
+<use 123_Page_04.png>
+Package pdftex.def Info: 123_Page_04.png  used on input line 224.
 (pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
  [12
 
 ]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 207.
+Package pdftex.def Info: 123_Page_04.png  used on input line 236.
 (pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
  [13
 
 ]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 221.
+Package pdftex.def Info: 123_Page_04.png  used on input line 240.
 (pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
  [14
 
 ] (/Users/anthonythomasjr/OneDrive - University of Texas at Arlington/Research Project/BHDFM/comprehensive-exam/.texpadtmp/comp.toc)
 File: 123_Page_02.png Graphic file (type png)
 <use 123_Page_02.png>
-Package pdftex.def Info: 123_Page_02.png  used on input line 223.
+Package pdftex.def Info: 123_Page_02.png  used on input line 242.
 (pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
  [15
 
 ]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 234.
+Package pdftex.def Info: 123_Page_04.png  used on input line 257.
 (pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
  [16
+
+]
+File: 123_Page_04.png Graphic file (type png)
+<use 123_Page_04.png>
+Package pdftex.def Info: 123_Page_04.png  used on input line 271.
+(pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
+ [17
+
+] (/Users/anthonythomasjr/OneDrive - University of Texas at Arlington/Research Project/BHDFM/comprehensive-exam/.texpadtmp/comp.toc)
+File: 123_Page_02.png Graphic file (type png)
+<use 123_Page_02.png>
+Package pdftex.def Info: 123_Page_02.png  used on input line 273.
+(pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
+ [18
+
+]
+File: 123_Page_04.png Graphic file (type png)
+<use 123_Page_04.png>
+Package pdftex.def Info: 123_Page_04.png  used on input line 284.
+(pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
+ [19
 
 ]
 \tf@nav=\write8
@@ -1190,42 +1196,30 @@ Package pdftex.def Info: 123_Page_04.png  used on input line 234.
 \tf@snm=\write10
 \openout10 = `comp.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 236.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 236.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 286.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 286.
  (/Users/anthonythomasjr/OneDrive - University of Texas at Arlington/Research Project/BHDFM/comprehensive-exam/.texpadtmp/comp.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 236.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 236.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 286.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 286.
 Package rerunfilecheck Info: File `comp.out' has not changed.
-(rerunfilecheck)             Checksum: F3E58B404E336F61D4F2C557E63D4986;314.
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                comp
-(biblatex)                and rerun LaTeX afterwards.
-
+(rerunfilecheck)             Checksum: D3428ADB3B09928D9F53372474631830;314.
 Package logreq Info: Writing requests to 'comp.run.xml'.
 \openout1 = `comp.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26020 strings out of 480608
- 497833 string characters out of 5903631
- 1144156 words of memory out of 5000000
- 41280 multiletter control sequences out of 15000+600000
+ 26141 strings out of 480608
+ 500109 string characters out of 5903631
+ 1145461 words of memory out of 5000000
+ 41394 multiletter control sequences out of 15000+600000
  549355 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 58i,12n,67p,809b,1625s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on "/Users/anthonythomasjr/OneDrive - University of Texas at Arlington/Research Project/BHDFM/comprehensive-exam/.texpadtmp/comp.pdf" (16 pages, 555387 bytes).
+ 58i,12n,67p,809b,2284s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on "/Users/anthonythomasjr/OneDrive - University of Texas at Arlington/Research Project/BHDFM/comprehensive-exam/.texpadtmp/comp.pdf" (19 pages, 587091 bytes).
 PDF statistics:
- 265 PDF objects out of 1000 (max. 8388607)
- 217 compressed objects within 3 object streams
- 41 named destinations out of 1000 (max. 500000)
+ 325 PDF objects out of 1000 (max. 8388607)
+ 272 compressed objects within 3 object streams
+ 48 named destinations out of 1000 (max. 500000)
  98 words of extra memory for PDF output out of 10000 (max. 10000000)
 

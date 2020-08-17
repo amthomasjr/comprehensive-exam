@@ -1,6 +1,8 @@
 \defcounter {refsection}{0}\relax 
 \beamer@slide {posterior}{7}
 \defcounter {refsection}{0}\relax 
-\beamer@slide {posterior.expectation}{7}
-\defcounter {refsection}{0}\relax 
 \beamer@slide {marginal.evidence}{7}
+\defcounter {refsection}{0}\relax 
+\beamer@slide {objective}{10}
+\defcounter {refsection}{0}\relax 
+\beamer@slide {new.objective}{13}
