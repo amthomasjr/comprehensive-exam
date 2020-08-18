@@ -1,5 +1,5 @@
 [0] Config.pm:304> INFO - This is Biber 2.14
 [0] Config.pm:307> INFO - Logfile is '/Users/anthonythomasjr/OneDrive - University of Texas at Arlington/Research Project/BHDFM/comprehensive-exam/.texpadtmp/comp.blg'
-[179] biber-darwin:322> INFO - === Mon Aug 17, 2020, 04:41:44
-[287] Biber.pm:415> INFO - Reading '/Users/anthonythomasjr/OneDrive - University of Texas at Arlington/Research Project/BHDFM/comprehensive-exam/.texpadtmp/comp.bcf'
-[611] Utils.pm:304> WARN - No data sources defined!
+[110] biber-darwin:322> INFO - === Mon Aug 17, 2020, 19:50:59
+[154] Biber.pm:415> INFO - Reading '/Users/anthonythomasjr/OneDrive - University of Texas at Arlington/Research Project/BHDFM/comprehensive-exam/.texpadtmp/comp.bcf'
+[288] Utils.pm:304> WARN - No data sources defined!

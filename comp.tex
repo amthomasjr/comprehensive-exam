@@ -3,6 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 \usepackage{amsthm, amsmath, mathrsfs, amsfonts, bm}
+\usepackage[ruled, vlined]{algorithm2e}
 \usepackage{setspace}
 \usepackage{graphicx}
 \usepackage{mdwlist}
@@ -20,7 +21,7 @@
 \renewcommand{\left}{\mathopen{}\mathclose \bgroup \originalleft}
 \renewcommand{\right}{\aftergroup \egroup \originalright}
 
-\newcommand{\E}{\mathrm{E}}
+\newcommand{\E}{\mathbb{E}}
 \newcommand{\Var}{\mathrm{Var}}
 \newcommand{\Cov}{\mathrm{Cov}}
 \DeclareMathOperator*{\argmax}{arg\,max}
@@ -152,8 +153,8 @@
 
 \begin{frame}
 	\frametitle{Why Variational Bayesian Inference?}
-	Consider a model with data $\bm X$ and unknowns $\bm Z = \left\{ {\bm Z}_1, {\bm Z}_2 \right\}$ (could be latent variables and model parameters).
-  		The goal is to compute the joint posterior of the unknowns given the data
+	Consider a model with data $\bm X$ and latent variables $\bm Z = \left\{ {\bm Z}_1, {\bm Z}_2 \right\}$.
+  		The goal is to compute the joint posterior of the latent variables given the data
   		\begin{equation} \label{posterior}
   			p \left( {\bm Z} | {\bm X} \right) = \frac{ p \left( {\bm X} | {\bm Z} \right) p \left( {\bm Z} \right) }{ p \left( {\bm X} \right) }
   		\end{equation}
@@ -218,9 +219,15 @@
 	\frametitle{Variational Bayesian Inference}
 	Instead, we optimize an alternative objective that is equivalent to (\ref{objective}) up to an added constant called the \textbf{evidence lower bound} (ELBO)
 	\begin{equation}
-		\text{ELBO} \left( q \right) = \E_q \left[ \log p \left( {\bm X}, {\bm Z} \right) \right] -\E_q \left[ \log q \left( {\bm Z} \right)\right]	
-		\end{equation}
-	Maximizing the ELBO is equivalent to (\ref{objective}).
+		\begin{aligned}
+			\text{ELBO} \left( q \right) &= \E_q \left[ \log p \left( {\bm X}, {\bm Z} \right) \right] -\E_q \left[ \log q \left( {\bm Z} \right)\right] \\
+			&= \E_q \left[ \log \frac{p \left( {\bm X}, {\bm Z} \right)}{q \left( {\bm Z} \right)} \right]
+		\end{aligned} \label{ELBO}
+	\end{equation}
+	It can be shown that 
+	\begin{equation*}
+		\argmin_{q \left( {\bm Z} \right) \in \mathcal Q} \text{KL} \left( q \left( {\bm Z} \right) \, || \, p \left( {\bm Z} | {\bm X} \right) \right) = \argmax_{q \left( {\bm Z} \right) \in \mathcal Q} \text{ELBO} \left( q \right) 
+	\end{equation*}
 \end{frame}
 
 \begin{frame}
@@ -233,14 +240,57 @@
 			q^{\star} \left( {\bm Z} \right) = \argmax_{q \left( {\bm Z} \right) \in \mathcal Q} \text{ELBO} \left( q \right) \label{new.objective}
 		\end{equation}
 	\end{enumerate}
+	Solving this optimization problem is still difficult in general
+		\begin{itemize}
+			\item Using the mean-field assumption can make it easier
+		\end{itemize}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Mean-Field Assumption}
-	
+	\begin{enumerate}
+		\item Partition the latent variables into $M$ groups, say ${\bm Z}_1, \ldots, {\bm Z}_M$
+		\item Assume that the distributions in $\mathcal Q$ factorize across the groups, i.e.
+		$$\mathcal Q = \left\{ q : q \left( {\bm Z} \right) = \prod_{m = 1}^M q_m \left( {\bm Z}_m \right) \right\}$$
+		\item Learning the optimal $q$ now reduces to learning the optimal $q_1, \ldots, q_M$
+		\item Straightforward to optimize via coordinate descent
+		\item This is \textbf{NOT} a modeling assumption
+	\end{enumerate}
 \end{frame}
 
-\section{Classical Factor Analysis}
+\begin{frame}
+	\frametitle{Mean-Field Assumption}
+	Interestingly, under the mean-field assumption, the optimization problem for  a single $q_m$ has the solution:
+	\begin{equation}
+		q_m \left( {\bm Z}_m \right) = \frac{ \exp \left\{ \E_{q_{-m}} \left[ \log p \left( {\bm X}, {\bm Z} \right) \right] \right\} }{ \int \exp \left\{ \E_{q_{-m}} \left[ \log p \left( {\bm X}, {\bm Z} \right) \right] \right\} \,d{\bm Z}_m }
+	\end{equation}
+	This establishes what is called the \textbf{coordinate ascent variational inference} algorithm.
+\end{frame}
+
+\begin{frame}
+	\frametitle{Coordinate Ascent Variational Inference}
+	\begin{algorithm}[H]
+		\SetKwInput{Input}{Input}
+		\SetKwInput{Output}{Output}
+		\SetKwInput{Initialize}{Initialize}
+		\SetAlgoLined
+		\DontPrintSemicolon
+		\Input{ Model $p \left( {\bm X}, {\bm Z} \right)$,  Data ${\bm X}$, }
+		\Output{Variational density  $q \left( {\bm Z} \right) = \prod_{m=1}^M q_m \left( {\bm Z}_m \right)$}
+		\Initialize{Variational densities $q_m \left( {\bm Z}_m \right)$}
+		\While{the ELBO has not converged}{
+			\For{$m \in \left\{ 1, 2, \ldots, M \right\}$}{
+				Set  $q_m \left( {\bm Z}_m \right) \propto \exp \left\{ \E_{q_{-m}} \left[ \log p \left( {\bm X}, {\bm Z} \right) \right] \right\}$\;
+			}
+			Compute $\operatorname{ELBO} \left( q \right)$
+	  	}
+	  	\Return $q \left( {\bm Z} \right)$ \;
+	 	\caption{Coordinate ascent variational inference}
+	\end{algorithm}
+\end{frame}
+
+\section{Hierarchical Dynamic Factor Analysis}
+\subsection{Classical Factor Analysis}
 
 \begin{frame}
 	\frametitle{Classical Factor Analysis Model}	
@@ -271,7 +321,6 @@
 	\end{enumerate}
 \end{frame}
 
-\section{Hierarchical Dynamic Factor Analysis}
 \subsection{Dynamic Factor Analysis}
 
 \begin{frame}
