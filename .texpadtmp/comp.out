@@ -1,5 +1,7 @@
 \BOOKMARK [2][]{Outline0.1}{Background}{}% 1
-\BOOKMARK [2][]{Outline0.2}{Variational Bayesian Inference}{}% 2
-\BOOKMARK [2][]{Outline0.3}{Hierarchical Dynamic Factor Analysis}{}% 3
-\BOOKMARK [3][]{Outline0.3.1.18}{Classical Factor Analysis}{Outline0.3}% 4
-\BOOKMARK [3][]{Outline0.3.2.20}{Dynamic Factor Analysis}{Outline0.3}% 5
+\BOOKMARK [3][]{Outline0.1.1.4}{Bayesian Inference}{Outline0.1}% 2
+\BOOKMARK [3][]{Outline0.1.2.5}{Factor Analysis}{Outline0.1}% 3
+\BOOKMARK [3][]{Outline0.1.3.6}{Dynamic Factor Analysis}{Outline0.1}% 4
+\BOOKMARK [2][]{Outline0.2}{Hierarchical Dynamic Factor Analysis}{}% 5
+\BOOKMARK [2][]{Outline0.3}{Variational Bayesian Inference}{}% 6
+\BOOKMARK [3][]{Outline0.3.1.20}{Orthogonal Factor Model}{Outline0.3}% 7

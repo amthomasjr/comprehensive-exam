@@ -122,13 +122,7 @@
 }
 
 \section{Background}
-\begin{frame}
-	\frametitle{Factor Analysis}
-	\begin{enumerate}
-		\item \textbf{Factor Analysis} is a method that uses the covariances between a set of observed variables to described them in terms of a smaller set of unobservable variables called factors.
-	\end{enumerate}
-\end{frame}
-
+\subsection{Bayesian Inference}
 \begin{frame}
 	\frametitle{Bayesian Inference}
 	\textbf{Bayesian Inference} can be described by two parts:
@@ -147,6 +141,38 @@
 				$$p \left( {\bm \Theta}_1 | {\bm X} \right) \text{ and } p \left( {\bm \Theta}_2 | {\bm X} \right)$$
 			\end{itemize}
 	\end{enumerate}
+\end{frame}
+
+\subsection{Factor Analysis}
+
+\begin{frame}
+	\frametitle{Factor Analysis}
+	\textbf{Factor Analysis} (FA) is a method that assumes that the covariance structure of a set of observations can be described in terms of a linear combination of latent variables called factors. \bigskip
+	
+	Typical uses of FA:
+	\begin{enumerate}
+		\item Dimension reduction: explains covariation between $N$ variables using $K < N$ factors
+		\item Data interpretation: finds factors that explain the covariation
+		\item Theory testing: tests whether a hypothesized factor structure fits observed data
+	\end{enumerate}
+\end{frame}
+
+\subsection{Dynamic Factor Analysis}
+\begin{frame}
+	\frametitle{Dynamic Factor Analysis}
+	
+\end{frame}
+
+\section{Hierarchical Dynamic Factor Analysis}
+
+\begin{frame}
+	\frametitle{Hierarchical Dynamic Factor Model}
+	\begin{align}
+	{\bf X}_{bst} &= {\bm \Lambda}_{H.bs} (L) {\bf H}_{bst} + {\bf e}_{Xbst} \\
+	{\bf H}_{bst} &= {\bm \Lambda}_{G.bs} (L) {\bf G}_{bt} + {\bf e}_{Hbst} \\
+	{\bf G}_{bt} &= {\bm \Lambda}_{F.b} (L) {\bf F}_{t} + {\bf e}_{Gbt} \\
+	{\bm \Psi}_{F} (L) {\bf F}_{t} &= {\bm \epsilon}_{Ft},
+\end{align}
 \end{frame}
 
 \section{Variational Bayesian Inference}
@@ -208,7 +234,7 @@
 
 \begin{frame}
 	\frametitle{Variational Bayesian Inference}
-	It can be shown that 
+	It follows that 
 	\begin{equation*}
 		\text{KL} \left( q \left( {\bm Z} \right) \, || \, p \left( {\bm Z} | {\bm X} \right) \right) = \E_q \left[ \log q \left( {\bm Z} \right)\right] - \E_q \left[ \log p \left( {\bm X}, {\bm Z} \right) \right] + \log p \left( {\bm X} \right)
 	\end{equation*}
@@ -219,10 +245,7 @@
 	\frametitle{Variational Bayesian Inference}
 	Instead, we optimize an alternative objective that is equivalent to (\ref{objective}) up to an added constant called the \textbf{evidence lower bound} (ELBO)
 	\begin{equation}
-		\begin{aligned}
-			\text{ELBO} \left( q \right) &= \E_q \left[ \log p \left( {\bm X}, {\bm Z} \right) \right] -\E_q \left[ \log q \left( {\bm Z} \right)\right] \\
-			&= \E_q \left[ \log \frac{p \left( {\bm X}, {\bm Z} \right)}{q \left( {\bm Z} \right)} \right]
-		\end{aligned} \label{ELBO}
+		\text{ELBO} \left( q \right) = \E_q \left[ \log p \left( {\bm X}, {\bm Z} \right) \right] -\E_q \left[ \log q \left( {\bm Z} \right)\right] \label{ELBO}
 	\end{equation}
 	It can be shown that 
 	\begin{equation*}
@@ -253,7 +276,7 @@
 		\item Assume that the distributions in $\mathcal Q$ factorize across the groups, i.e.
 		$$\mathcal Q = \left\{ q : q \left( {\bm Z} \right) = \prod_{m = 1}^M q_m \left( {\bm Z}_m \right) \right\}$$
 		\item Learning the optimal $q$ now reduces to learning the optimal $q_1, \ldots, q_M$
-		\item Straightforward to optimize via coordinate descent
+		\item Straightforward to optimize via coordinate ascent
 		\item This is \textbf{NOT} a modeling assumption
 	\end{enumerate}
 \end{frame}
@@ -289,12 +312,10 @@
 	\end{algorithm}
 \end{frame}
 
-\section{Hierarchical Dynamic Factor Analysis}
-\subsection{Classical Factor Analysis}
-
+\subsection{Orthogonal Factor Model}
 \begin{frame}
-	\frametitle{Classical Factor Analysis Model}	
-	The Classical (orthogonal) FA model assumes assumes the form 
+	\frametitle{The Orthogonal Factor Model}	
+	The orthogonal FA model assumes the form 
 	\begin{equation*}
 		{\bm X} = {\bm \Lambda} {\bm F}+ {\bm e}
 	\end{equation*}
@@ -308,29 +329,14 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Normal Theory Assumptions}
-	The Normal Theory Classical FA model assumes the form
-	\begin{equation*}
-		{\bm X} = {\bm \Lambda} {\bm F}+ {\bm e}
-	\end{equation*}
-	and adds the assumptions that 
+	\frametitle{Assumptions of the Orthogonal Factor Model}
+	The orthogonal FA model assumes the following:
 	\begin{enumerate}
-		\item $\bm F \sim \mathcal N \left( \bm 0, \bm{I}_K \right)$
-		\item $\bm e \sim \mathcal N \left( \bm 0, \bm \Sigma \right)$ where $\bm \Sigma = \operatorname{diag} \left( \sigma_1^2, \ldots, \sigma_N^2 \right)$
+		\item $\bm F \sim \mathcal N \left( {\bm 0}_K, \bf{I}_K \right)$
+		\item $\bm e \sim \mathcal N \left( {\bm 0}_N, \bm \Sigma \right)$ where $\bm \Sigma = \operatorname{diag} \left( \sigma_1^2, \ldots, \sigma_N^2 \right)$
 		\item $F_k$ and $e_n$ are independent for every pair $k, n$
 	\end{enumerate}
-\end{frame}
-
-\subsection{Dynamic Factor Analysis}
-
-\begin{frame}
-	\frametitle{Hierarchical Dynamic Factor Model}
-	\begin{align}
-	{\bf X}_{bst} &= {\bm \Lambda}_{H.bs} (L) {\bf H}_{bst} + {\bf e}_{Xbst} \\
-	{\bf H}_{bst} &= {\bm \Lambda}_{G.bs} (L) {\bf G}_{bt} + {\bf e}_{Hbst} \\
-	{\bf G}_{bt} &= {\bm \Lambda}_{F.b} (L) {\bf F}_{t} + {\bf e}_{Gbt} \\
-	{\bm \Psi}_{F} (L) {\bf F}_{t} &= {\bm \epsilon}_{Ft},
-\end{align}
+	where ${\bm 0}_K$ and ${\bm 0}_N$ are zero-vectors of lengths $K$ and $N$, respectively, and ${\bf I}_K$ is the $K \times K$ identity matrix.
 \end{frame}
 
 \end{document}
