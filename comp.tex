@@ -160,10 +160,51 @@
 \subsection{Dynamic Factor Analysis}
 \begin{frame}
 	\frametitle{Dynamic Factor Analysis}
-	
+	\textbf{Dynamic factor models} allow the factors to not only affect the observations contemporaneously, but also through their lags:
+	\begin{equation}
+		{\bm X}_t = {\bm \Lambda} \left( L \right) {\bm F}_t + {\bm \epsilon}_t
+	\end{equation}
+	where 
+	\begin{equation*}
+		{\bm \Lambda} \left( L \right) = {\bm \Lambda}_0 + {\bm \Lambda}_1 L + \cdots + {\bm \Lambda}_s L^s
+	\end{equation*}
+	is a matrix polynomial of factor loadings in the lag operator $L$ and
+	\begin{equation*}
+		L^s {\bm F}_t = {\bm F}_{t-s}
+	\end{equation*}	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Dynamic Factor Analysis}
+	The factors are usually assumed to follow a vector autoregressive process:
+	\begin{equation}
+		{\bm \Phi} \left( L \right) {\bm F}_t = {\bm \varepsilon}_t
+	\end{equation}
+	where 
+	\begin{equation*}
+		{\bm \Phi} \left( L \right) = {\bf I}_K - {\bm \Phi}_1 L - \cdots  - {\bm \Phi}_p L^p
+	\end{equation*}
+	is a matrix polynomial of autoregressive coefficients in the lag operator $L$.
 \end{frame}
 
 \section{Hierarchical Dynamic Factor Analysis}
+
+\begin{frame}
+	\frametitle{Hierarchical Dynamic Factor Model}
+	Take a large panel of data and split it into a smaller number of blocks, each of which consists of a reasonably large number of series. 
+	\begin{itemize}
+		\item Each block is driven by its own block-specific factors
+		\item The block-specific factors have a component driven by factors that are common across all of the blocks
+	\end{itemize}
+	\bigskip
+	
+	Thus, a series in a given block $b$ has three sources of variation:
+	\begin{enumerate}
+		\item idiosyncratic
+		\item block-specific
+		\item common
+	\end{enumerate}
+\end{frame}
 
 \begin{frame}
 	\frametitle{Hierarchical Dynamic Factor Model}
