@@ -11,6 +11,10 @@
 \defcounter {refsection}{0}\relax 
 \beamer@sectionintoc {2}{Hierarchical Dynamic Factor Analysis}{8}{0}{2}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {3}{Variational Bayesian Inference}{11}{0}{3}
+\beamer@sectionintoc {3}{Variational Bayesian Inference}{15}{0}{3}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {3}{1}{Orthogonal Factor Model}{22}{0}{3}
+\beamer@subsectionintoc {3}{1}{Orthogonal Factor Model}{26}{0}{3}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {4}{Future Work}{29}{0}{4}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {5}{References}{31}{0}{5}

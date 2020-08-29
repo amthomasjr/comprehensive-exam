@@ -9,6 +9,7 @@
 \usepackage{mdwlist}
 \usepackage{breqn}
 \usepackage[backend=biber]{biblatex}
+	\addbibresource{ref.bib}
 \usepackage{tabulary}
 \usepackage{multirow}
 \usepackage{filecontents}
@@ -84,7 +85,7 @@
  	{\setbeamertemplate{background canvas}{\includegraphics[height=\paperheight,width=\paperwidth]{123_Page_02.png}}
 	 	\begin{frame}<beamer>
 	    	\frametitle{Section \thesection}
-	    	\tableofcontents[currentsection, currentsubsection]
+	    	\tableofcontents[currentsection]
 	    \end{frame}
     }
 }
@@ -135,11 +136,11 @@
 		\item Compute the posterior
 			\begin{itemize}
 				\item Posterior: $$p \left( {\bm \Theta} | {\bm X} \right) = \frac{ p \left( {\bm X} | {\bm \Theta} \right) p \left( {\bm \Theta} \right) }{ p \left( {\bm X} \right)}$$
-				\item Can report summaries, e.g. posterior expectations
+				\item Report summaries, e.g. posterior expectations
 				$$\E \left[ h( {\bm \Theta} ) | {\bm X} \right]$$
-				and compute marginal posteriors
-				$$p \left( {\bm \Theta}_1 | {\bm X} \right) \text{ and } p \left( {\bm \Theta}_2 | {\bm X} \right)$$
-			\end{itemize}
+				or marginal posterior expectations
+				$$\E \left[ h( {\bm \Theta}_i ) | {\bm X} \right]$$	
+		\end{itemize}
 	\end{enumerate}
 \end{frame}
 
@@ -168,7 +169,7 @@
 	\begin{equation*}
 		{\bm \Lambda} \left( L \right) = {\bm \Lambda}_0 + {\bm \Lambda}_1 L + \cdots + {\bm \Lambda}_s L^s
 	\end{equation*}
-	is a matrix polynomial of factor loadings in the lag operator $L$ and
+	is a distributed lag matrix polynomial of factor loadings in the lag operator $L$ and
 	\begin{equation*}
 		L^s {\bm F}_t = {\bm F}_{t-s}
 	\end{equation*}	
@@ -191,14 +192,7 @@
 
 \begin{frame}
 	\frametitle{Hierarchical Dynamic Factor Model}
-	Take a large panel of data and split it into a smaller number of blocks, each of which consists of a reasonably large number of series. 
-	\begin{itemize}
-		\item Each block is driven by its own block-specific factors
-		\item The block-specific factors have a component driven by factors that are common across all of the blocks
-	\end{itemize}
-	\bigskip
-	
-	Thus, a series in a given block $b$ has three sources of variation:
+	In \cite{moenchDynamicHierarchicalFactor2013}, the authors generalize the two-level dynamic factor model by positing that for each $t$, the $n$th series in a given block $b$, denoted by $ X_{bnt}$, has three sources of variation:
 	\begin{enumerate}
 		\item idiosyncratic
 		\item block-specific
@@ -208,12 +202,73 @@
 
 \begin{frame}
 	\frametitle{Hierarchical Dynamic Factor Model}
+	A three-level representation of the data is given as 
 	\begin{align}
-	{\bf X}_{bst} &= {\bm \Lambda}_{H.bs} (L) {\bf H}_{bst} + {\bf e}_{Xbst} \\
-	{\bf H}_{bst} &= {\bm \Lambda}_{G.bs} (L) {\bf G}_{bt} + {\bf e}_{Hbst} \\
-	{\bf G}_{bt} &= {\bm \Lambda}_{F.b} (L) {\bf F}_{t} + {\bf e}_{Gbt} \\
-	{\bm \Psi}_{F} (L) {\bf F}_{t} &= {\bm \epsilon}_{Ft},
-\end{align}
+		X_{bnt} &= {\bm \lambda}^n_{G.b} \left( L \right) {\bm G}_{bt} + e_{Xbnt} \\
+		{\bm G}_{bt} &= {\bm \Lambda}_{F.b} \left( L \right) {\bm F}_t + {\bm e}_{Gbt} \\
+		{\bm \Psi}_F \left( L \right) {\bm F}_t &= {\bm \epsilon}_{Ft},
+	\end{align}
+	where
+	\begin{itemize}
+		\item ${\bm \lambda}^n_{G.b} \left( L \right)$ denotes a distributed lag polynomial of block-level factor loadings
+		\item ${\bm \Lambda}_{F.b} \left( L \right)$ denotes a distributed lag matrix polynomial of common factor loadings
+		\item ${\bm G}_{bt} = \left( G_{b1t}, \ldots, G_{bK_{Gb}t} \right)^{\top}$ denotes the block-level factors
+		\item ${\bm F}_t = \left( F_{1t}, \ldots, F_{K_F t} \right)^{\top}$ denotes the common factors
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Hierarchical Dynamic Factor Model}
+	For some blocks, it may be appropriate to break up the data into subblocks, which adds another source of variation.
+	Let $Z_{bsnt}$ be the $n$th series in subblock $s$ of block $b$.
+	A four-level representation of the subblock data is given as
+	\begin{align*}
+		Z_{bsnt} &= {\bm \lambda}^n_{H.bs} \left( L \right) {\bm H}_{bst} + e_{Zbsnt} \\
+		{\bm H}_{bst} &= {\bm \Lambda}_{G.bs} \left( L \right) {\bm G}_{bt} + {\bm e}_{Hbst} \\
+		{\bm G}_{bt} &= {\bm \Lambda}_{F.b} \left( L \right) {\bm F}_t + {\bm e}_{Gbt} \\
+		{\bm \Psi}_F \left( L \right) {\bm F}_t &= {\bm \epsilon}_{Ft}
+	\end{align*}	
+	where
+	\begin{itemize}
+		\item ${\bm \lambda}^n_{H.bs} \left( L \right)$ denotes a distributed lag polynomial of subblock-level factor loadings
+		\item ${\bm \Lambda}_{G.bs} \left( L \right)$ denotes a distributed lag matrix polynomial of block-level factor loadings
+		\item ${\bm H}_{bst} = \left( H_{bs1t}, \ldots, H_{bsK_{Hbs}t} \right)^{\top}$ denotes the subblock-level factors
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Hierarchical Dynamic Factor Model}
+	The idiosyncratic components, the subblock-specific, block-specific, and common factors are assumed to be stationary, Gaussian autoregressive processes of orders $q_{Zbsn}$, $q_{Xbn}$, $q_{Hbsi}$, $q_{Gbj}$, and $q_{Fk}$, respectively, i.e.
+	\begin{alignat*}{3}
+		\psi_{Z.bsn} \left( L \right) e_{Zbsnt} &= \epsilon_{Zbsnt}, \quad & \epsilon_{Zbsnt} &\sim \mathcal{N} \left( 0, \sigma^2_{Zbsn} \right) \quad & n &= 1, \ldots, N_{bs} \\
+		\psi_{X.bn} \left( L \right) e_{Xbnt} &= \epsilon_{Xbnt}, \quad & \epsilon_{Xbnt} &\sim \mathcal{N} \left( 0, \sigma^2_{Xbn} \right) \quad & n &= 1, \ldots, N_b \\
+		\psi_{H.bsi} \left( L \right) e_{Hbsit} &= \epsilon_{Hbsit}, & \epsilon_{Hbsi} &\sim \mathcal{N} \left(0, \sigma^2_{Hbsi} \right) & i &= 1, \ldots, K_{Hbs} \\
+		\psi_{G.bj} \left( L \right) e_{Gbjt} &= \epsilon_{Gbjt}, & \epsilon_{Gbjt} &\sim \mathcal{N} \left(0, \sigma^2_{Gbj} \right) & j &= 1, \ldots, K_{Gb} \\
+		\psi_{F.k} \left( L \right) F_{kt} &= \epsilon_{Fkt}, & \epsilon_{Fkt} &\sim \mathcal{N} \left(0, \sigma^2_{Fk} \right) & k &= 1, \ldots, K_{F}
+	\end{alignat*}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Hierarchical Dynamic Factor Model}
+	\begin{itemize}
+		\item Not all series need to belong to blocks and subblocks, hence the data used in a four-level model are a mixture of $Z_{bsnt}$, $X_{bnt}$, and $X_{nt}$
+		\item For brevity, we work with only the three-level model, therefore data will consist of $X_{bnt}$
+	\end{itemize}	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Hierarchical Dynamic Factor Model}
+	From \cite{moenchDynamicHierarchicalFactor2013}, this posterior distribution of the factors and model parameters is estimated via MCMC.
+	The main steps are:
+	\begin{enumerate}
+		\item Organize data into blocks and subblocks.
+		\item Get initial values for $\left\{ {\bm F}_t : t = 1, \ldots, T \right\}$ and $\left\{ {\bm G}_{bt} : b =  1, \ldots, B,  t = 1, \ldots, T \right\}$ via principal components
+		\item Use the initial values for $\left\{ {\bm F}_t \right\}$ and $\left\{ {\bm G}_{bt} \right\}$ to obtain initial values for ${\bm \Lambda}$, ${\bm \Psi}$, and ${\bm \Sigma}$
+		\item Conditional on ${\bm \Lambda}, {\bm \Psi}, {\bm \Sigma}, \left\{ {\bm F}_t \right\}$ and data draw $\left\{ {\bm G}_{bt} \right\}$
+		\item Conditional on ${\bm \Lambda}, {\bm \Psi}, {\bm \Sigma}, \left\{ {\bm G}_{bt} \right\}$ and data draw $\left\{ {\bm F}_t \right\}$
+		\item Conditional on $\left\{ {\bm F}_t \right\}, \left\{ {\bm G}_{bt} \right\}$ and data draw ${\bm \Lambda}, {\bm \Psi}, {\bm \Sigma}$
+		\item Return to 3
+	\end{enumerate}
 \end{frame}
 
 \section{Variational Bayesian Inference}
@@ -355,6 +410,11 @@
 
 \subsection{Orthogonal Factor Model}
 \begin{frame}
+	\frametitle{The Orthogonal Factor Model}
+	Here we present a VB framework for the orthogonal factor model.
+\end{frame}
+
+\begin{frame}
 	\frametitle{The Orthogonal Factor Model}	
 	The orthogonal FA model assumes the form 
 	\begin{equation*}
@@ -378,6 +438,17 @@
 		\item $F_k$ and $e_n$ are independent for every pair $k, n$
 	\end{enumerate}
 	where ${\bm 0}_K$ and ${\bm 0}_N$ are zero-vectors of lengths $K$ and $N$, respectively, and ${\bf I}_K$ is the $K \times K$ identity matrix.
+\end{frame}
+
+\section{Future Work}
+\begin{frame}
+	\frametitle{Future Work}
+	The main goal of the project is to develop a variational Bayesian framework to handle the four-level model from \cite{moenchDynamicHierarchicalFactor2013}.
+\end{frame}
+\section{References}
+\begin{frame}[allowframebreaks]
+	\frametitle{References}
+	\printbibliography
 \end{frame}
 
 \end{document}

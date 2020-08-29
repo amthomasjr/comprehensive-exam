@@ -1,0 +1,73 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{moenchDynamicHierarchicalFactor2013}{article}{}
+      \name{author}{3}{}{%
+        {{hash=6073212e4bde0743ef1e6058ae1b8bc6}{%
+           family={Moench},
+           familyi={M\bibinitperiod},
+           given={Emanuel},
+           giveni={E\bibinitperiod}}}%
+        {{hash=3d9598cb5e0ac67e52bb26096e0fd043}{%
+           family={Ng},
+           familyi={N\bibinitperiod},
+           given={Serena},
+           giveni={S\bibinitperiod}}}%
+        {{hash=9fc0dd7b264039d7b29133af7c71ed82}{%
+           family={Potter},
+           familyi={P\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{87330483205b032144bd476cf0d6a438}
+      \strng{fullhash}{87330483205b032144bd476cf0d6a438}
+      \strng{bibnamehash}{87330483205b032144bd476cf0d6a438}
+      \strng{authorbibnamehash}{87330483205b032144bd476cf0d6a438}
+      \strng{authornamehash}{87330483205b032144bd476cf0d6a438}
+      \strng{authorfullhash}{87330483205b032144bd476cf0d6a438}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper uses multilevel factor models to characterize withinand between-block variations as well as idiosyncratic noise in large dynamic panels. Block-level shocks are distinguished from genuinely common shocks, and the estimated block-level factors are easy to interpret. The framework achieves dimension reduction and yet explicitly allows for heterogeneity between blocks. The model is estimated using an MCMC algorithm that takes into account the hierarchical structure of the factors. The importance of block-level variations is illustrated in a four-level model estimated on a panel of 445 series related to different categories of real activity in the United States.}
+      \field{issn}{0034-6535, 1530-9142}
+      \field{journaltitle}{Review of Economics and Statistics}
+      \field{month}{12}
+      \field{number}{5}
+      \field{title}{Dynamic {{Hierarchical Factor Models}}}
+      \field{volume}{95}
+      \field{year}{2013}
+      \field{pages}{1811\bibrangedash 1817}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1162/REST_a_00359
+      \endverb
+      \verb{file}
+      \verb /Users/anthonythomasjr/Zotero/storage/IR8DKKN7/Moench et al. - 2013 - Dynamic Hierarchical Factor Models.pdf
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
