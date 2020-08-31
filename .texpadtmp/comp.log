@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.8)  29 AUG 2020 17:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.8)  30 AUG 2020 20:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -540,70 +540,102 @@ Package: bm 2019/07/24 v1.2d Bold Symbol Support (DPC/FMi)
 \symboldpureletters=\mathgroup11
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
 LaTeX Info: Redefining \bm on input line 209.
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2020/03/24 v1.24 mathematical typesetting tools
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count311
+\calc@Bcount=\count312
+\calc@Adimen=\dimen278
+\calc@Bdimen=\dimen279
+\calc@Askip=\skip63
+\calc@Bskip=\skip64
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count313
+\calc@Cskip=\skip65
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
+\g_MT_multlinerow_int=\count314
+\l_MT_multwidth_dim=\dimen280
+\origjot=\skip66
+\l_MT_shortvdotswithinadjustabove_dim=\dimen281
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen282
+\l_MT_above_intertext_sep=\dimen283
+\l_MT_below_intertext_sep=\dimen284
+\l_MT_above_shortintertext_sep=\dimen285
+\l_MT_below_shortintertext_sep=\dimen286
+\xmathstrut@box=\box73
+\xmathstrut@dim=\dimen287
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
 Package: algorithm2e 2017/07/18 v5.2 algorithms environments
-\c@AlgoLine=\count311
+\c@AlgoLine=\count315
  (/usr/local/texlive/2020/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\algocf@hangindent=\skip63
+\algocf@hangindent=\skip67
  (/usr/local/texlive/2020/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
-\c@checkoddpage=\count312
+\c@checkoddpage=\count316
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/relsize/relsize.sty
 Package: relsize 2013/03/29 ver 4.1
 )
-\skiptotal=\skip64
-\skiplinenumber=\skip65
-\skiprule=\skip66
-\skiphlne=\skip67
-\skiptext=\skip68
-\skiplength=\skip69
-\algomargin=\skip70
-\skipalgocfslide=\skip71
-\algowidth=\dimen278
-\inoutsize=\dimen279
-\inoutindent=\dimen280
-\interspacetitleruled=\dimen281
-\interspacealgoruled=\dimen282
-\interspacetitleboxruled=\dimen283
-\algocf@ruledwidth=\skip72
-\algocf@inoutbox=\box73
-\algocf@inputbox=\box74
-\AlCapSkip=\skip73
-\AlCapHSkip=\skip74
-\algoskipindent=\skip75
-\algocf@nlbox=\box75
-\algocf@hangingbox=\box76
-\algocf@untilbox=\box77
-\algocf@skipuntil=\skip76
-\algocf@capbox=\box78
-\algocf@lcaptionbox=\skip77
-\algoheightruledefault=\skip78
-\algoheightrule=\skip79
-\algotitleheightruledefault=\skip80
-\algotitleheightrule=\skip81
-\c@algocfline=\count313
-\c@algocfproc=\count314
-\c@algocf=\count315
-\algocf@algoframe=\box79
-\algocf@algobox=\box80
+\skiptotal=\skip68
+\skiplinenumber=\skip69
+\skiprule=\skip70
+\skiphlne=\skip71
+\skiptext=\skip72
+\skiplength=\skip73
+\algomargin=\skip74
+\skipalgocfslide=\skip75
+\algowidth=\dimen288
+\inoutsize=\dimen289
+\inoutindent=\dimen290
+\interspacetitleruled=\dimen291
+\interspacealgoruled=\dimen292
+\interspacetitleboxruled=\dimen293
+\algocf@ruledwidth=\skip76
+\algocf@inoutbox=\box74
+\algocf@inputbox=\box75
+\AlCapSkip=\skip77
+\AlCapHSkip=\skip78
+\algoskipindent=\skip79
+\algocf@nlbox=\box76
+\algocf@hangingbox=\box77
+\algocf@untilbox=\box78
+\algocf@skipuntil=\skip80
+\algocf@capbox=\box79
+\algocf@lcaptionbox=\skip81
+\algoheightruledefault=\skip82
+\algoheightrule=\skip83
+\algotitleheightruledefault=\skip84
+\algotitleheightrule=\skip85
+\c@algocfline=\count317
+\c@algocfproc=\count318
+\c@algocf=\count319
+\algocf@algoframe=\box80
+\algocf@algobox=\box81
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/mdwtools/mdwlist.sty
 Package: mdwlist 1996/05/02 1.1 Various list-related things
-) (/usr/local/texlive/2020/texmf-dist/tex/latex/breqn/breqn.sty (/usr/local/texlive/2020/texmf-dist/tex/latex/l3kernel/expl3.sty
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/breqn/breqn.sty (/usr/local/texlive/2020/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2020-03-06 L3 programming layer (loader) 
  (/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count316
-\l__pdf_internal_box=\box81
+\l__kernel_color_stack_int=\count320
+\l__pdf_internal_box=\box82
 ))
 Package: breqn 2020/02/18 v0.98i Breaking equations
-
-(/usr/local/texlive/2020/texmf-dist/tex/latex/breqn/flexisym.sty
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/breqn/flexisym.sty
 Package: flexisym 2020/02/18 v0.98i Make math characters macros
 LaTeX Info: Redefining \textprime on input line 298.
 LaTeX Info: Redefining \not on input line 356.
@@ -639,143 +671,131 @@ LaTeX Info: Redefining \textstyle on input line 95.
 LaTeX Info: Redefining \scriptstyle on input line 97.
 LaTeX Info: Redefining \scriptscriptstyle on input line 99.
 LaTeX Info: Redefining \genfrac on input line 145.
-)) (/usr/local/texlive/2020/texmf-dist/tex/latex/tools/calc.sty
-Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count317
-\calc@Bcount=\count318
-\calc@Adimen=\dimen284
-\calc@Bdimen=\dimen285
-\calc@Askip=\skip82
-\calc@Bskip=\skip83
-LaTeX Info: Redefining \setlength on input line 80.
-LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count319
-\calc@Cskip=\skip84
-)
-\inf@bad=\count320
-\maxint=\count321
-\listwidth=\dimen286
-\eqnumsep=\dimen287
-\eqmargin=\dimen288
-\eqlinespacing=\skip85
-\eqlineskip=\skip86
-\eqlineskiplimit=\dimen289
+))
+\inf@bad=\count321
+\maxint=\count322
+\listwidth=\dimen294
+\eqnumsep=\dimen295
+\eqmargin=\dimen296
+\eqlinespacing=\skip86
+\eqlineskip=\skip87
+\eqlineskiplimit=\dimen297
 \eqbinoffset=\muskip18
 \eqdelimoffset=\muskip19
-\eqindentstep=\dimen290
+\eqindentstep=\dimen298
 \eqstyle=\toks46
-\eqbreakdepth=\count322
-\eqinterlinepenalty=\count323
-\intereqpenalty=\count324
-\intereqskip=\skip87
-\prerelpenalty=\count325
-\prebinoppenalty=\count326
+\eqbreakdepth=\count323
+\eqinterlinepenalty=\count324
+\intereqpenalty=\count325
+\intereqskip=\skip88
+\prerelpenalty=\count326
+\prebinoppenalty=\count327
 \Dmedmuskip=\muskip20
 \Dthickmuskip=\muskip21
-\eqleftskip=\skip88
-\eqrightskip=\skip89
-\eq@vspan=\skip90
+\eqleftskip=\skip89
+\eqrightskip=\skip90
+\eq@vspan=\skip91
 \eq@binoffset=\muskip22
-\EQ@box=\box82
-\EQ@copy=\box83
-\EQ@numbox=\box84
-\eq@wdNum=\dimen291
-\GRP@numbox=\box85
-\grp@wdNum=\dimen292
-\eq@lines=\count327
-\eq@curline=\count328
-\eq@badness=\count329
-\EQ@vims=\count330
-\eq@dp=\dimen293
-\eq@wdL=\dimen294
-\eq@wdT=\dimen295
-\eq@wdMin=\dimen296
-\grp@wdL=\dimen297
-\grp@wdR=\dimen298
-\grp@wdT=\dimen299
-\eq@wdRmax=\dimen300
-\eq@firstht=\dimen301
-\eq@wdCond=\dimen302
-\eq@indentstep=\dimen303
-\eq@linewidth=\dimen304
-\grp@linewidth=\dimen305
-\eq@hshift=\dimen306
-\eq@given@sidespace=\dimen307
-\mathindent=\dimen308
-\eq@final@linecount=\count331
-\eq@wdR=\dimen309
+\EQ@box=\box83
+\EQ@copy=\box84
+\EQ@numbox=\box85
+\eq@wdNum=\dimen299
+\GRP@numbox=\box86
+\grp@wdNum=\dimen300
+\eq@lines=\count328
+\eq@curline=\count329
+\eq@badness=\count330
+\EQ@vims=\count331
+\eq@dp=\dimen301
+\eq@wdL=\dimen302
+\eq@wdT=\dimen303
+\eq@wdMin=\dimen304
+\grp@wdL=\dimen305
+\grp@wdR=\dimen306
+\grp@wdT=\dimen307
+\eq@wdRmax=\dimen308
+\eq@firstht=\dimen309
+\eq@wdCond=\dimen310
+\eq@indentstep=\dimen311
+\eq@linewidth=\dimen312
+\grp@linewidth=\dimen313
+\eq@hshift=\dimen314
+\eq@given@sidespace=\dimen315
+\mathindent=\dimen316
+\eq@final@linecount=\count332
+\eq@wdR=\dimen317
 \EQ@continue=\toks47
-\lr@level=\count332
+\lr@level=\count333
 \GRP@queue=\toks48
-\GRP@box=\box86
-\GRP@wholebox=\box87
-\darraycolsep=\skip91
-\cur@row=\count333
-\cur@col=\count334
-\conditionsep=\skip92
+\GRP@box=\box87
+\GRP@wholebox=\box88
+\darraycolsep=\skip92
+\cur@row=\count334
+\cur@col=\count335
+\conditionsep=\skip93
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2019/12/01 v3.14 programmable bibliographies (PK/MW)
  (/usr/local/texlive/2020/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count335
+\lrq@indent=\count336
  (/usr/local/texlive/2020/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-\c@tabx@nest=\count336
-\c@listtotal=\count337
-\c@listcount=\count338
-\c@liststart=\count339
-\c@liststop=\count340
-\c@citecount=\count341
-\c@citetotal=\count342
-\c@multicitecount=\count343
-\c@multicitetotal=\count344
-\c@instcount=\count345
-\c@maxnames=\count346
-\c@minnames=\count347
-\c@maxitems=\count348
-\c@minitems=\count349
-\c@citecounter=\count350
-\c@maxcitecounter=\count351
-\c@savedcitecounter=\count352
-\c@uniquelist=\count353
-\c@uniquename=\count354
-\c@refsection=\count355
-\c@refsegment=\count356
-\c@maxextratitle=\count357
-\c@maxextratitleyear=\count358
-\c@maxextraname=\count359
-\c@maxextradate=\count360
-\c@maxextraalpha=\count361
-\c@abbrvpenalty=\count362
-\c@highnamepenalty=\count363
-\c@lownamepenalty=\count364
-\c@maxparens=\count365
-\c@parenlevel=\count366
-\blx@tempcnta=\count367
-\blx@tempcntb=\count368
-\blx@tempcntc=\count369
-\blx@maxsection=\count370
-\blx@maxsegment@0=\count371
-\blx@notetype=\count372
-\blx@parenlevel@text=\count373
-\blx@parenlevel@foot=\count374
-\blx@sectionciteorder@0=\count375
-\blx@entrysetcounter=\count376
-\labelnumberwidth=\skip93
-\labelalphawidth=\skip94
-\biblabelsep=\skip95
-\bibitemsep=\skip96
-\bibnamesep=\skip97
-\bibinitsep=\skip98
-\bibparsep=\skip99
-\bibhang=\skip100
+\c@tabx@nest=\count337
+\c@listtotal=\count338
+\c@listcount=\count339
+\c@liststart=\count340
+\c@liststop=\count341
+\c@citecount=\count342
+\c@citetotal=\count343
+\c@multicitecount=\count344
+\c@multicitetotal=\count345
+\c@instcount=\count346
+\c@maxnames=\count347
+\c@minnames=\count348
+\c@maxitems=\count349
+\c@minitems=\count350
+\c@citecounter=\count351
+\c@maxcitecounter=\count352
+\c@savedcitecounter=\count353
+\c@uniquelist=\count354
+\c@uniquename=\count355
+\c@refsection=\count356
+\c@refsegment=\count357
+\c@maxextratitle=\count358
+\c@maxextratitleyear=\count359
+\c@maxextraname=\count360
+\c@maxextradate=\count361
+\c@maxextraalpha=\count362
+\c@abbrvpenalty=\count363
+\c@highnamepenalty=\count364
+\c@lownamepenalty=\count365
+\c@maxparens=\count366
+\c@parenlevel=\count367
+\blx@tempcnta=\count368
+\blx@tempcntb=\count369
+\blx@tempcntc=\count370
+\blx@maxsection=\count371
+\blx@maxsegment@0=\count372
+\blx@notetype=\count373
+\blx@parenlevel@text=\count374
+\blx@parenlevel@foot=\count375
+\blx@sectionciteorder@0=\count376
+\blx@entrysetcounter=\count377
+\labelnumberwidth=\skip94
+\labelalphawidth=\skip95
+\biblabelsep=\skip96
+\bibitemsep=\skip97
+\bibnamesep=\skip98
+\bibinitsep=\skip99
+\bibparsep=\skip100
+\bibhang=\skip101
 \blx@bcfin=\read4
 \blx@bcfout=\write5
 \blx@langwohyphens=\language86
-\c@mincomprange=\count377
-\c@maxcomprange=\count378
-\c@mincompwidth=\count379
+\c@mincomprange=\count378
+\c@maxcomprange=\count379
+\c@mincompwidth=\count380
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/blx-dm.def
@@ -783,88 +803,88 @@ File: blx-dm.def 2019/12/01 v3.14 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count380
-\c@savedafterword=\count381
-\c@annotator=\count382
-\c@savedannotator=\count383
-\c@author=\count384
-\c@savedauthor=\count385
-\c@bookauthor=\count386
-\c@savedbookauthor=\count387
-\c@commentator=\count388
-\c@savedcommentator=\count389
-\c@editor=\count390
-\c@savededitor=\count391
-\c@editora=\count392
-\c@savededitora=\count393
-\c@editorb=\count394
-\c@savededitorb=\count395
-\c@editorc=\count396
-\c@savededitorc=\count397
-\c@foreword=\count398
-\c@savedforeword=\count399
-\c@holder=\count400
-\c@savedholder=\count401
-\c@introduction=\count402
-\c@savedintroduction=\count403
-\c@namea=\count404
-\c@savednamea=\count405
-\c@nameb=\count406
-\c@savednameb=\count407
-\c@namec=\count408
-\c@savednamec=\count409
-\c@translator=\count410
-\c@savedtranslator=\count411
-\c@shortauthor=\count412
-\c@savedshortauthor=\count413
-\c@shorteditor=\count414
-\c@savedshorteditor=\count415
-\c@labelname=\count416
-\c@savedlabelname=\count417
-\c@institution=\count418
-\c@savedinstitution=\count419
-\c@lista=\count420
-\c@savedlista=\count421
-\c@listb=\count422
-\c@savedlistb=\count423
-\c@listc=\count424
-\c@savedlistc=\count425
-\c@listd=\count426
-\c@savedlistd=\count427
-\c@liste=\count428
-\c@savedliste=\count429
-\c@listf=\count430
-\c@savedlistf=\count431
-\c@location=\count432
-\c@savedlocation=\count433
-\c@organization=\count434
-\c@savedorganization=\count435
-\c@origlocation=\count436
-\c@savedoriglocation=\count437
-\c@origpublisher=\count438
-\c@savedorigpublisher=\count439
-\c@publisher=\count440
-\c@savedpublisher=\count441
-\c@language=\count442
-\c@savedlanguage=\count443
-\c@origlanguage=\count444
-\c@savedoriglanguage=\count445
-\c@pageref=\count446
-\c@savedpageref=\count447
-\shorthandwidth=\skip101
-\shortjournalwidth=\skip102
-\shortserieswidth=\skip103
-\shorttitlewidth=\skip104
-\shortauthorwidth=\skip105
-\shorteditorwidth=\skip106
-\locallabelnumberwidth=\skip107
-\locallabelalphawidth=\skip108
-\localshorthandwidth=\skip109
-\localshortjournalwidth=\skip110
-\localshortserieswidth=\skip111
-\localshorttitlewidth=\skip112
-\localshortauthorwidth=\skip113
-\localshorteditorwidth=\skip114
+\c@afterword=\count381
+\c@savedafterword=\count382
+\c@annotator=\count383
+\c@savedannotator=\count384
+\c@author=\count385
+\c@savedauthor=\count386
+\c@bookauthor=\count387
+\c@savedbookauthor=\count388
+\c@commentator=\count389
+\c@savedcommentator=\count390
+\c@editor=\count391
+\c@savededitor=\count392
+\c@editora=\count393
+\c@savededitora=\count394
+\c@editorb=\count395
+\c@savededitorb=\count396
+\c@editorc=\count397
+\c@savededitorc=\count398
+\c@foreword=\count399
+\c@savedforeword=\count400
+\c@holder=\count401
+\c@savedholder=\count402
+\c@introduction=\count403
+\c@savedintroduction=\count404
+\c@namea=\count405
+\c@savednamea=\count406
+\c@nameb=\count407
+\c@savednameb=\count408
+\c@namec=\count409
+\c@savednamec=\count410
+\c@translator=\count411
+\c@savedtranslator=\count412
+\c@shortauthor=\count413
+\c@savedshortauthor=\count414
+\c@shorteditor=\count415
+\c@savedshorteditor=\count416
+\c@labelname=\count417
+\c@savedlabelname=\count418
+\c@institution=\count419
+\c@savedinstitution=\count420
+\c@lista=\count421
+\c@savedlista=\count422
+\c@listb=\count423
+\c@savedlistb=\count424
+\c@listc=\count425
+\c@savedlistc=\count426
+\c@listd=\count427
+\c@savedlistd=\count428
+\c@liste=\count429
+\c@savedliste=\count430
+\c@listf=\count431
+\c@savedlistf=\count432
+\c@location=\count433
+\c@savedlocation=\count434
+\c@organization=\count435
+\c@savedorganization=\count436
+\c@origlocation=\count437
+\c@savedoriglocation=\count438
+\c@origpublisher=\count439
+\c@savedorigpublisher=\count440
+\c@publisher=\count441
+\c@savedpublisher=\count442
+\c@language=\count443
+\c@savedlanguage=\count444
+\c@origlanguage=\count445
+\c@savedoriglanguage=\count446
+\c@pageref=\count447
+\c@savedpageref=\count448
+\shorthandwidth=\skip102
+\shortjournalwidth=\skip103
+\shortserieswidth=\skip104
+\shorttitlewidth=\skip105
+\shortauthorwidth=\skip106
+\shorteditorwidth=\skip107
+\locallabelnumberwidth=\skip108
+\locallabelalphawidth=\skip109
+\localshorthandwidth=\skip110
+\localshortjournalwidth=\skip111
+\localshortserieswidth=\skip112
+\localshorttitlewidth=\skip113
+\localshortauthorwidth=\skip114
+\localshorteditorwidth=\skip115
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/blx-compat.def
@@ -874,19 +894,19 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
-\c@textcitecount=\count448
-\c@textcitetotal=\count449
-\c@textcitemaxnames=\count450
-\c@biburlbigbreakpenalty=\count451
-\c@biburlbreakpenalty=\count452
-\c@biburlnumpenalty=\count453
-\c@biburlucpenalty=\count454
-\c@biburllcpenalty=\count455
+\c@textcitecount=\count449
+\c@textcitetotal=\count450
+\c@textcitemaxnames=\count451
+\c@biburlbigbreakpenalty=\count452
+\c@biburlbreakpenalty=\count453
+\c@biburlnumpenalty=\count454
+\c@biburlucpenalty=\count455
+\c@biburllcpenalty=\count456
 \biburlbigskip=\muskip23
 \biburlnumskip=\muskip24
 \biburlucskip=\muskip25
 \biburllcskip=\muskip26
-\c@smartand=\count456
+\c@smartand=\count457
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
@@ -896,8 +916,8 @@ Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2019/12/01 v3.14 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count457
-\c@bbx:relatedtotal=\count458
+\c@bbx:relatedcount=\count458
+\c@bbx:relatedtotal=\count459
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
@@ -923,25 +943,25 @@ File: biblatex.cfg
 Package: tabulary 2014/06/11 v0.10 tabulary package (DPC)
  (/usr/local/texlive/2020/texmf-dist/tex/latex/tools/array.sty
 Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
-\col@sep=\dimen310
-\ar@mcellbox=\box88
-\extrarowheight=\dimen311
+\col@sep=\dimen318
+\ar@mcellbox=\box89
+\extrarowheight=\dimen319
 \NC@list=\toks49
-\extratabsurround=\skip115
-\backup@length=\skip116
-\ar@cellbox=\box89
+\extratabsurround=\skip116
+\backup@length=\skip117
+\ar@cellbox=\box90
 )
-\TY@count=\count459
-\TY@linewidth=\dimen312
-\tymin=\dimen313
-\tymax=\dimen314
-\TY@tablewidth=\dimen315
+\TY@count=\count460
+\TY@linewidth=\dimen320
+\tymin=\dimen321
+\tymax=\dimen322
+\TY@tablewidth=\dimen323
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
-\multirow@colwidth=\skip117
-\multirow@cntb=\count460
-\multirow@dima=\skip118
-\bigstrutjot=\dimen316
+\multirow@colwidth=\skip118
+\multirow@cntb=\count461
+\multirow@dima=\skip119
+\bigstrutjot=\dimen324
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/filecontents/filecontents.sty
 Package: filecontents 2019/09/20 v1.5 Create an external file from within a LaTeX document
 
@@ -957,27 +977,31 @@ Package filecontents Warning: This package is obsolete. Disabling it and
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count461
-\@quotereset=\count462
-(/Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/.texpadtmp/comp.aux)
+\@quotelevel=\count462
+\@quotereset=\count463
+(/Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/.texpadtmp/comp.aux
+
+LaTeX Warning: Label `new.objective' multiply defined.
+
+)
 \openout1 = `comp.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -987,12 +1011,12 @@ LaTeX Font Info:    ... okay on input line 93.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: includehead includefoot 
-* h-part:(L,W,R)=(28.45274pt, 307.28987pt, 28.45274pt)
-* v-part:(T,H,B)=(0.0pt, 273.14662pt, 0.0pt)
-* \paperwidth=364.19536pt
-* \paperheight=273.14662pt
-* \textwidth=307.28987pt
-* \textheight=244.6939pt
+* h-part:(L,W,R)=(28.45274pt, 398.3386pt, 28.45274pt)
+* v-part:(T,H,B)=(0.0pt, 256.0748pt, 0.0pt)
+* \paperwidth=455.24408pt
+* \paperheight=256.0748pt
+* \textwidth=398.3386pt
+* \textheight=227.62207pt
 * \oddsidemargin=-43.81725pt
 * \evensidemargin=-43.81725pt
 * \topmargin=-72.26999pt
@@ -1015,16 +1039,16 @@ LaTeX Font Info:    ... okay on input line 93.
 
 (/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count463
-\scratchdimen=\dimen317
-\scratchbox=\box90
-\nofMPsegments=\count464
-\nofMParguments=\count465
+\scratchcounter=\count464
+\scratchdimen=\dimen325
+\scratchbox=\box91
+\nofMPsegments=\count465
+\nofMParguments=\count466
 \everyMPshowfont=\toks50
-\MPscratchCnt=\count466
-\MPscratchDim=\dimen318
-\MPnumerator=\count467
-\makeMPintoPDFobject=\count468
+\MPscratchCnt=\count467
+\MPscratchDim=\dimen326
+\MPnumerator=\count468
+\makeMPintoPDFobject=\count469
 \everyMPtoPDFconversion=\toks51
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1032,8 +1056,8 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/local/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 )) ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box91
-Package hyperref Info: Link coloring OFF on input line 93.
+\AtBeginShipoutBox=\box92
+Package hyperref Info: Link coloring OFF on input line 94.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  (/usr/local/texlive/2020/texmf-dist/tex/latex/refcount/refcount.sty
@@ -1041,11 +1065,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/local/texlive/2020/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count469
+\c@section@level=\count470
 )
-LaTeX Info: Redefining \ref on input line 93.
-LaTeX Info: Redefining \pageref on input line 93.
-LaTeX Info: Redefining \nameref on input line 93.
+LaTeX Info: Redefining \ref on input line 94.
+LaTeX Info: Redefining \pageref on input line 94.
+LaTeX Info: Redefining \nameref on input line 94.
  (/Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/.texpadtmp/comp.out) (/Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/.texpadtmp/comp.out)
 \@outlinefile=\write7
 \openout7 = `comp.out'.
@@ -1076,254 +1100,300 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'comp.bbl' found.
  (/Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/.texpadtmp/comp.bbl)
-Package biblatex Info: Reference section=0 on input line 93.
-Package biblatex Info: Reference segment=0 on input line 93.
+Package biblatex Info: Reference section=0 on input line 94.
+Package biblatex Info: Reference segment=0 on input line 94.
  (/Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/.texpadtmp/comp.nav)
 
 Package hyperref Warning: Option `pdfauthor' has already been used,
-(hyperref)                setting the option has no effect on input line 101.
+(hyperref)                setting the option has no effect on input line 102.
 
 <UTA-title-page.png, id=54, 722.7pt x 542.025pt>
 File: UTA-title-page.png Graphic file (type png)
 <use UTA-title-page.png>
-Package pdftex.def Info: UTA-title-page.png  used on input line 114.
-(pdftex.def)             Requested size: 364.19536pt x 273.14565pt.
+Package pdftex.def Info: UTA-title-page.png  used on input line 115.
+(pdftex.def)             Requested size: 455.24408pt x 341.4362pt.
 [1
 
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./UTA-title-page.png>] (/Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/.texpadtmp/comp.toc)
 <123_Page_02.png, id=78, 722.7pt x 542.025pt>
 File: 123_Page_02.png Graphic file (type png)
 <use 123_Page_02.png>
-Package pdftex.def Info: 123_Page_02.png  used on input line 122.
-(pdftex.def)             Requested size: 364.19536pt x 273.14565pt.
+Package pdftex.def Info: 123_Page_02.png  used on input line 123.
+(pdftex.def)             Requested size: 455.24408pt x 341.4362pt.
  [2
 
  <./123_Page_02.png>] (/Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/.texpadtmp/comp.toc)
 File: 123_Page_02.png Graphic file (type png)
 <use 123_Page_02.png>
-Package pdftex.def Info: 123_Page_02.png  used on input line 125.
-(pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
+Package pdftex.def Info: 123_Page_02.png  used on input line 126.
+(pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [3
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 145.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 146.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 145.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 146.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 145.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 146.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 145.
+LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 146.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mathkerncmss.
 )
 <123_Page_04.png, id=113, 722.7pt x 542.025pt>
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 145.
-(pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
+Package pdftex.def Info: 123_Page_04.png  used on input line 146.
+(pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [4
 
  <./123_Page_04.png>]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 159.
-(pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
+Package pdftex.def Info: 123_Page_04.png  used on input line 161.
+(pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [5
 
 ]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 176.
-(pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
+Package pdftex.def Info: 123_Page_04.png  used on input line 174.
+(pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [6
 
 ]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
 Package pdftex.def Info: 123_Page_04.png  used on input line 189.
-(pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
+(pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [7
 
-] (/Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/.texpadtmp/comp.toc)
-File: 123_Page_02.png Graphic file (type png)
-<use 123_Page_02.png>
-Package pdftex.def Info: 123_Page_02.png  used on input line 191.
-(pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
+]
+File: 123_Page_04.png Graphic file (type png)
+<use 123_Page_04.png>
+Package pdftex.def Info: 123_Page_04.png  used on input line 210.
+(pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [8
 
 ]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 201.
-(pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
+Package pdftex.def Info: 123_Page_04.png  used on input line 223.
+(pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [9
 
-]
-File: 123_Page_04.png Graphic file (type png)
-<use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 218.
-(pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
+] (/Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/.texpadtmp/comp.toc)
+File: 123_Page_02.png Graphic file (type png)
+<use 123_Page_02.png>
+Package pdftex.def Info: 123_Page_02.png  used on input line 225.
+(pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [10
 
 ]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 237.
-(pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
+Package pdftex.def Info: 123_Page_04.png  used on input line 235.
+(pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [11
 
 ]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 249.
-(pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
+Package pdftex.def Info: 123_Page_04.png  used on input line 252.
+(pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [12
 
 ]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 257.
-(pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
+Package pdftex.def Info: 123_Page_04.png  used on input line 271.
+(pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [13
 
 ]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 272.
-(pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
+Package pdftex.def Info: 123_Page_04.png  used on input line 283.
+(pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [14
-
-] (/Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/.texpadtmp/comp.toc)
-File: 123_Page_02.png Graphic file (type png)
-<use 123_Page_02.png>
-Package pdftex.def Info: 123_Page_02.png  used on input line 274.
-(pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
- [15
 
 ]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
 Package pdftex.def Info: 123_Page_04.png  used on input line 291.
-(pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
+(pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
+ [15
+
+]
+File: 123_Page_04.png Graphic file (type png)
+<use 123_Page_04.png>
+Package pdftex.def Info: 123_Page_04.png  used on input line 305.
+(pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [16
 
 ]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 304.
-(pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
+Package pdftex.def Info: 123_Page_04.png  used on input line 325.
+(pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [17
 
-]
-File: 123_Page_04.png Graphic file (type png)
-<use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 313.
-(pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
+] (/Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/.texpadtmp/comp.toc)
+File: 123_Page_02.png Graphic file (type png)
+<use 123_Page_02.png>
+Package pdftex.def Info: 123_Page_02.png  used on input line 327.
+(pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [18
 
 ]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 329.
-(pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
+Package pdftex.def Info: 123_Page_04.png  used on input line 344.
+(pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [19
 
 ]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 338.
-(pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
+Package pdftex.def Info: 123_Page_04.png  used on input line 357.
+(pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [20
 
 ]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 350.
-(pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
+Package pdftex.def Info: 123_Page_04.png  used on input line 366.
+(pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [21
 
 ]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 366.
-(pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
+Package pdftex.def Info: 123_Page_04.png  used on input line 382.
+(pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [22
 
 ]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 378.
-(pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
+Package pdftex.def Info: 123_Page_04.png  used on input line 391.
+(pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [23
 
 ]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 387.
-(pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
+Package pdftex.def Info: 123_Page_04.png  used on input line 403.
+(pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [24
 
 ]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 409.
-(pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
+Package pdftex.def Info: 123_Page_04.png  used on input line 419.
+(pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [25
 
 ]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 415.
-(pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
+Package pdftex.def Info: 123_Page_04.png  used on input line 431.
+(pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [26
 
 ]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 430.
-(pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
+Package pdftex.def Info: 123_Page_04.png  used on input line 440.
+(pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [27
 
 ]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 441.
-(pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
+Package pdftex.def Info: 123_Page_04.png  used on input line 462.
+(pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [28
 
-] (/Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/.texpadtmp/comp.toc)
-File: 123_Page_02.png Graphic file (type png)
-<use 123_Page_02.png>
-Package pdftex.def Info: 123_Page_02.png  used on input line 443.
-(pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
+]
+File: 123_Page_04.png Graphic file (type png)
+<use 123_Page_04.png>
+Package pdftex.def Info: 123_Page_04.png  used on input line 479.
+(pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [29
 
 ]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 447.
-(pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
+Package pdftex.def Info: 123_Page_04.png  used on input line 491.
+(pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [30
 
-] (/Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/.texpadtmp/comp.toc)
-File: 123_Page_02.png Graphic file (type png)
-<use 123_Page_02.png>
-Package pdftex.def Info: 123_Page_02.png  used on input line 448.
-(pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
+]pdfTeX warning (ext4): destination with the same identifier (name{new.objective}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.507 \end{frame}
+                 
+File: 123_Page_04.png Graphic file (type png)
+<use 123_Page_04.png>
+Package pdftex.def Info: 123_Page_04.png  used on input line 507.
+(pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [31
 
 ]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 452.
-(pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
+Package pdftex.def Info: 123_Page_04.png  used on input line 528.
+(pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [32
+
+]
+File: 123_Page_04.png Graphic file (type png)
+<use 123_Page_04.png>
+Package pdftex.def Info: 123_Page_04.png  used on input line 546.
+(pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
+ [33
+
+]
+File: 123_Page_04.png Graphic file (type png)
+<use 123_Page_04.png>
+Package pdftex.def Info: 123_Page_04.png  used on input line 563.
+(pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
+ [34
+
+] (/Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/.texpadtmp/comp.toc)
+File: 123_Page_02.png Graphic file (type png)
+<use 123_Page_02.png>
+Package pdftex.def Info: 123_Page_02.png  used on input line 565.
+(pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
+ [35
+
+]
+File: 123_Page_04.png Graphic file (type png)
+<use 123_Page_04.png>
+Package pdftex.def Info: 123_Page_04.png  used on input line 569.
+(pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
+ [36
+
+] (/Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/.texpadtmp/comp.toc)
+File: 123_Page_02.png Graphic file (type png)
+<use 123_Page_02.png>
+Package pdftex.def Info: 123_Page_02.png  used on input line 570.
+(pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
+ [37
+
+]
+File: 123_Page_04.png Graphic file (type png)
+<use 123_Page_04.png>
+Package pdftex.def Info: 123_Page_04.png  used on input line 574.
+(pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
+ [38
 
  </usr/local/texlive/2020/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>]
 \tf@nav=\write8
@@ -1335,31 +1405,35 @@ Package pdftex.def Info: 123_Page_04.png  used on input line 452.
 \tf@snm=\write10
 \openout10 = `comp.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 454.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 454.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 576.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 576.
  (/Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/.texpadtmp/comp.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 454.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 454.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 576.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 576.
 Package rerunfilecheck Info: File `comp.out' has not changed.
-(rerunfilecheck)             Checksum: 5EA2AFF549255293591500EE3A512B8F;594.
+(rerunfilecheck)             Checksum: 5A2951203DE3A3B385F36589B87A9A2E;594.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package logreq Info: Writing requests to 'comp.run.xml'.
 \openout1 = `comp.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 27408 strings out of 480608
- 520713 string characters out of 5903631
- 1175903 words of memory out of 5000000
- 42610 multiletter control sequences out of 15000+600000
+ 27919 strings out of 480608
+ 529817 string characters out of 5903631
+ 1187947 words of memory out of 5000000
+ 43102 multiletter control sequences out of 15000+600000
  550170 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  58i,21n,67p,809b,2286s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/
 2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on /Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/.texpadtmp/comp.pdf (32 pages, 680652 bytes).
+Output written on /Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/.texpadtmp/comp.pdf (38 pages, 695914 bytes).
 PDF statistics:
- 529 PDF objects out of 1000 (max. 8388607)
- 451 compressed objects within 5 object streams
- 81 named destinations out of 1000 (max. 500000)
+ 582 PDF objects out of 1000 (max. 8388607)
+ 498 compressed objects within 5 object streams
+ 93 named destinations out of 1000 (max. 500000)
  138 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,8 +1,8 @@
-\documentclass[10pt, compress, notheorems]{beamer}
+\documentclass[10pt, compress, notheorems, aspectratio=169]{beamer}
 
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
-\usepackage{amsthm, amsmath, mathrsfs, amsfonts, bm}
+\usepackage{amsthm, amsmath, mathrsfs, amsfonts, bm, mathtools}
 \usepackage[ruled, vlined]{algorithm2e}
 \usepackage{setspace}
 \usepackage{graphicx}
@@ -27,6 +27,7 @@
 \newcommand{\Cov}{\mathrm{Cov}}
 \DeclareMathOperator*{\argmax}{arg\,max}
 \DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator{\tr}{tr}
 
 % \hypersetup{colorlinks=true} % Enable colored hyperlinks
 
@@ -148,7 +149,8 @@
 
 \begin{frame}
 	\frametitle{Factor Analysis}
-	\textbf{Factor Analysis} (FA) is a method that assumes that the covariance structure of a set of observations can be described in terms of a linear combination of latent variables called factors. \bigskip
+	\textbf{Factor Analysis} (FA) is a method that assumes that the covariance structure of a set of observations can be described in terms of a linear combination of unobservable (latent) variables called factors. 
+	\bigskip
 	
 	Typical uses of FA:
 	\begin{enumerate}
@@ -156,6 +158,34 @@
 		\item Data interpretation: finds factors that explain the covariation
 		\item Theory testing: tests whether a hypothesized factor structure fits observed data
 	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Factor Analysis}
+	FA can be extended to time series data. 
+	For the remainder of the presentation we will assume that we are working with time series data.
+	\bigskip
+	
+	For a sample of $T$ time periods we have the following:
+	\begin{itemize}
+		\item ${\bm F}_t = \left( F_{1t}, \ldots, F_{Kt} \right)^{\top}$ denotes the factors
+		\item ${\bm X}_t = \left( X_{1t}, \ldots, X_{Nt} \right)^{\top}$ denotes the observations
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Factor Analysis}
+	The measurement equation that relates the observations to the factors is given by
+	\begin{equation}
+		{\bm X}_t = {\bm \Lambda} {\bm F}_t + {\bm e}_t
+	\end{equation}
+	where
+	\begin{itemize}
+		\item ${\bm X}_t = \left( X_{1t}, \ldots, X_{Nt} \right)^{\top}$ denotes a vector of observations
+		\item ${\bm \Lambda} = \left[ \lambda_{nk} \right]_{N \times K}$ denotes a matrix of factor loadings that act as weights
+		\item ${\bm F}_t = \left( F_{1t}, \ldots, F_{Kt} \right)^{\top}$ denotes a vector of factors
+		\item ${\bm e}_t$ is a vector of measurement errors, disturbances, and idiosyncratic (unique) factors
+	\end{itemize}
 \end{frame}
 
 \subsection{Dynamic Factor Analysis}
@@ -169,10 +199,14 @@
 	\begin{equation*}
 		{\bm \Lambda} \left( L \right) = {\bm \Lambda}_0 + {\bm \Lambda}_1 L + \cdots + {\bm \Lambda}_s L^s
 	\end{equation*}
-	is a distributed lag matrix polynomial of factor loadings in the lag operator $L$ and
+	is a distributed lag matrix polynomial of order $s$ in the lag operator $L$ and
 	\begin{equation*}
-		L^s {\bm F}_t = {\bm F}_{t-s}
-	\end{equation*}	
+		L^s {\bm F}_t = {\bm F}_{t-s}.
+	\end{equation*}
+	The observation equation can be expressed instead as
+	\begin{equation*}
+		{\bm X}_t = {\bm \Lambda}_0 {\bm F}_t + {\bm \Lambda}_1 {\bm F}_{t-1} + \cdots + {\bm \Lambda}_s {\bm F}_{t-s} + {\bm \epsilon}_t
+	\end{equation*}
 \end{frame}
 
 \begin{frame}
@@ -252,23 +286,42 @@
 	\frametitle{Hierarchical Dynamic Factor Model}
 	\begin{itemize}
 		\item Not all series need to belong to blocks and subblocks, hence the data used in a four-level model are a mixture of $Z_{bsnt}$, $X_{bnt}$, and $X_{nt}$
-		\item For brevity, we work with only the three-level model, therefore data will consist of $X_{bnt}$
+		\item For brevity, we work with only the three-level model for which all data belongs to a block, therefore data will consist of $X_{bnt}$ for $b = 1, \ldots, B$
 	\end{itemize}	
 \end{frame}
 
 \begin{frame}
 	\frametitle{Hierarchical Dynamic Factor Model}
-	From \cite{moenchDynamicHierarchicalFactor2013}, this posterior distribution of the factors and model parameters is estimated via MCMC.
+	From \cite{moenchDynamicHierarchicalFactor2013}, this posterior distribution of the factors and model parameters is estimated via a Gibbs sampler.
 	The main steps are:
 	\begin{enumerate}
-		\item Organize data into blocks and subblocks.
+		\item Organize data into blocks 
 		\item Get initial values for $\left\{ {\bm F}_t : t = 1, \ldots, T \right\}$ and $\left\{ {\bm G}_{bt} : b =  1, \ldots, B,  t = 1, \ldots, T \right\}$ via principal components
 		\item Use the initial values for $\left\{ {\bm F}_t \right\}$ and $\left\{ {\bm G}_{bt} \right\}$ to obtain initial values for ${\bm \Lambda}$, ${\bm \Psi}$, and ${\bm \Sigma}$
 		\item Conditional on ${\bm \Lambda}, {\bm \Psi}, {\bm \Sigma}, \left\{ {\bm F}_t \right\}$ and data draw $\left\{ {\bm G}_{bt} \right\}$
 		\item Conditional on ${\bm \Lambda}, {\bm \Psi}, {\bm \Sigma}, \left\{ {\bm G}_{bt} \right\}$ and data draw $\left\{ {\bm F}_t \right\}$
 		\item Conditional on $\left\{ {\bm F}_t \right\}, \left\{ {\bm G}_{bt} \right\}$ and data draw ${\bm \Lambda}, {\bm \Psi}, {\bm \Sigma}$
-		\item Return to 3
 	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\begin{algorithm}[H]
+		\SetKwInput{Input}{Input}
+		\SetKwInput{Output}{Output}
+		\SetKwInput{Initialize}{Initialize}
+		\SetAlgoLined
+		\DontPrintSemicolon
+		\Input{Data $\left\{ {\bm X}_{t} \right\}$}
+		\Output{Sample from posterior distribution over factors and model parameters}
+		\Initialize{ $\left\{ {\bm F}_{t} \right\}^{(0)} ,\left\{ {\bm G}_{t} \right\}^{(0)}, \left\{ {\bm \Lambda}, {\bm \Psi}, {\bm \Sigma} \right\}^{(0)}$}
+		\For{$i = 1, \ldots, M$}{
+			$\left\{ {\bm G}_{t} \right\}^{(i)} \sim \left\{ {\bm G}_{t} \right\} | \left\{ {\bm F}_t \right\}^{(i-1)}, \left\{ {\bm \Lambda}, {\bm \Psi}, {\bm \Sigma} \right\}^{(i-1)}, \left\{ {\bm X}_{t} \right\}$ \vspace{0.5em}\;
+			$\left\{ {\bm F}_{t} \right\}^{(i)} \sim \left\{ {\bm F}_{t} \right\} | \left\{ {\bm G}_{t} \right\}^{(i)}, \left\{ {\bm \Lambda}, {\bm \Psi}, {\bm \Sigma} \right\}^{(i-1)}, \left\{ {\bm X}_{t} \right\}$\vspace{0.5em}\;
+			$\left\{ {\bm \Lambda}, {\bm \Psi}, {\bm \Sigma} \right\}^{(i)} \sim {\bm \Lambda}, {\bm \Psi}, {\bm \Sigma} | \left\{ {\bm F}_{t} \right\}^{(i)}, \left\{ {\bm G}_{t} \right\}^{(i)}, \left\{ {\bm X}_{t} \right\}$\;
+		}
+	  	\Return $\left\{ \left\{ {\bm F}_t \right\}^{(i)}, \left\{ {\bm G}_{t} \right\}^{(i)}, \left\{ {\bm \Lambda}, {\bm \Psi}, {\bm \Sigma} \right\}^{(i)} \right\}_{i = 1}^M$ \;
+	 	\caption{Gibbs Sampler for a Hierarchical DFM}
+	\end{algorithm}
 \end{frame}
 
 \section{Variational Bayesian Inference}
@@ -411,33 +464,102 @@
 \subsection{Orthogonal Factor Model}
 \begin{frame}
 	\frametitle{The Orthogonal Factor Model}
-	Here we present a VB framework for the orthogonal factor model.
-\end{frame}
-
-\begin{frame}
-	\frametitle{The Orthogonal Factor Model}	
+	Here we present a VB framework for the orthogonal time series factor analysis model.
 	The orthogonal FA model assumes the form 
 	\begin{equation*}
-		{\bm X} = {\bm \Lambda} {\bm F}+ {\bm e}
+		{\bm X}_t = {\bm \Lambda} {\bm F}_t+ {\bm e}_t
 	\end{equation*}
-	where
+	with the following assumptions:
 	\begin{enumerate}
-		\item ${\bm X} = \left( X_{1}, \ldots, X_{N} \right)^{\top}$ denotes the vector of observations
-		\item $\bm \Lambda = \left[ \lambda_{nk} \right]_{N \times K}$ denotes the matrix of factor loadings 
-		\item ${\bm F} = \left( F_{1}, \ldots, F_{K} \right)^{\top}$ denotes the vector of latent factors
-		\item ${\bm e} = \left( e_{1}, \ldots, e_{N} \right)^{\top}$ denotes the vector of latent error terms
+		\item ${\bm F}_t \overset{\text{iid}}{\sim} \mathcal N \left( {\bm 0}_K, \bf{I}_K \right)$
+		\item ${\bm e}_t \overset{\text{iid}}{\sim} \mathcal N \left( {\bm 0}_N, \bm \Sigma \right)$ where $\bm \Sigma = \operatorname{diag} \left( \sigma_1^2, \ldots, \sigma_N^2 \right)$
+		\item ${\bm F}_t$ and ${\bm e}_s$ are independent for every pair $t, s$
 	\end{enumerate}
+	where ${\bm 0}_K$ and ${\bm 0}_N$ are zero-vectors of lengths $K$ and $N$, respectively, and ${\bf I}_K$ is the $K \times K$ identity matrix.
 \end{frame}
 
 \begin{frame}
-	\frametitle{Assumptions of the Orthogonal Factor Model}
-	The orthogonal FA model assumes the following:
-	\begin{enumerate}
-		\item $\bm F \sim \mathcal N \left( {\bm 0}_K, \bf{I}_K \right)$
-		\item $\bm e \sim \mathcal N \left( {\bm 0}_N, \bm \Sigma \right)$ where $\bm \Sigma = \operatorname{diag} \left( \sigma_1^2, \ldots, \sigma_N^2 \right)$
-		\item $F_k$ and $e_n$ are independent for every pair $k, n$
-	\end{enumerate}
-	where ${\bm 0}_K$ and ${\bm 0}_N$ are zero-vectors of lengths $K$ and $N$, respectively, and ${\bf I}_K$ is the $K \times K$ identity matrix.
+	Under the assumptions in the previous slide the likelihood is
+	\begin{equation*}
+		p \left( {\bf X}_{1:T} | {\bf F}_{1:T}, {\bm \Lambda}, {\bm \Sigma} \right) \propto \det \left( {\bf \Sigma} \right)^{-\frac{T}{2}} \exp \left\{ -\frac{1}{2} \sum_{t = 1}^T \left( {\bf X}_t - {\bm \Lambda} {\bf F}_t \right)^{\top} {\bf \Sigma}^{-1} \left( {\bf X}_t - {\bm \Lambda} {\bf F}_t \right) \right\}
+	\end{equation*}
+	We assign the following prior distributions:
+	\begin{align*}
+		p \left( {\bm \Lambda} | {\bm \Sigma} \right) &= \prod_{n = 1}^N \mathcal{N} \left( {\bm \lambda}_n \,|\, {\bf 0}_K, \sigma^2_n {\bf I}_K \right) \\
+		p \left( {\bm \Sigma} \right) &= \prod_{n = 1}^N \text{Scale-inv-} \chi^2 \left( \sigma^2_n \,|\, \nu_0, \tau^2_0 \right)
+	\end{align*}
+\end{frame}
+
+\begin{frame}
+	The goal here is to find a variational approximation to the posterior distribution over using CAVI, i.e. to find
+	\begin{equation*}
+		q^{\star} \left( {\bm F}_{1:T}, {\bm \Lambda}, {\bm \Sigma} \right) \approx p \left( {\bm F}_{1:T}, {\bm \Lambda}, {\bm \Sigma} | {\bm X}_{1:T} \right)
+	\end{equation*}
+	such that 
+	\begin{equation*}
+		q^{\star} \left( {\bm F}_{1:T}, {\bm \Lambda}, {\bm \Sigma} \right) = \argmax_{q \left( {\bm F}, {\bm \Lambda}, {\bm \Sigma}  \right) \in \mathcal Q} \text{ELBO} \left( q \right) \label{new.objective}
+	\end{equation*}
+	where
+	\begin{align*}
+		\mathcal Q &= \left\{ q : q \left( {\bm F}_{1:T}, {\bm \Lambda}, {\bm \Sigma} \right) = q \left( {\bm F}_{1:T} \right) q \left( {\bm \Lambda} \right) q \left( {\bm \Sigma} \right) \right\} \\
+		&= \left\{ q : q \left( {\bm F}_{1:T}, {\bm \Lambda}, {\bm \Sigma} \right) = \prod_{t = 1}^T q \left( {\bm F}_t \right) \prod_{n = 1}^N q \left( {\bm \lambda}_n \right) q \left( {\sigma}^2_n \right) \right\}
+	\end{align*}
+\end{frame}
+
+\begin{frame}
+	\begin{itemize}
+		\item With the mean-field assumption we have 
+			\begin{align*}
+				\log q \left( {\bm F}_{1:T} \right) &= \E_{-{\bm F}} \left[ \log p \left( {\bm X}_{1:T}, {\bm F}_{1:T}, {\bm \Lambda}, {\bm \Sigma} \right) \right] + \text{const} \\
+				\log q \left( {\bm \Lambda} \right) &= \E_{-{\bm \Lambda}} \left[ \log p \left( {\bm X}_{1:T}, {\bm F}_{1:T}, {\bm \Lambda}, {\bm \Sigma} \right) \right] + \text{const} \\
+				\log q \left( {\bm \Sigma} \right) &= \E_{-{\bm \Sigma}} \left[ \log p \left( {\bm X}_{1:T}, {\bm F}_{1:T}, {\bm \Lambda}, {\bm \Sigma} \right) \right] + \text{const}
+			\end{align*}
+		\item In this case the log-joint $\log p \left( {\bm X}_{1:T}, {\bm F}_{1:T}, {\bm \Lambda}, {\bm \Sigma} \right)$ expands as 
+			\begin{equation*}
+				\log p \left( {\bm X}_{1:T} | {\bm F}_{1:T}, {\bm \Lambda}, {\bm \Sigma} \right) + \log p \left( {\bm F}_{1:T} \right) + \log p \left( {\bm \Lambda} | {\bm \Sigma} \right) + \log p \left( {\bm \Sigma} \right)
+			\end{equation*}
+		\item Therefore,
+			\begin{align*}
+				\log q \left( {\bm F}_{1:T} \right) &= \E_{-{\bm F}} \left[ \log p \left( {\bm X}_{1:T} | {\bm F}_{1:T}, {\bm \Lambda}, {\bm \Sigma} \right) + \log p \left( {\bm F}_{1:T} \right) \right] + \text{const} \\
+				\log q \left( {\bm \Lambda} \right) &= \E_{-{\bm \Lambda}} \left[ \log p \left( {\bm X}_{1:T} | {\bm F}_{1:T}, {\bm \Lambda}, {\bm \Sigma} \right) + \log p \left( {\bm \Lambda} | {\bm \Sigma} \right) \right] + \text{const} \\
+				\log q \left( {\bm \Sigma} \right) &= \E_{-{\bm \Sigma}} \left[ \log p \left( {\bm X}_{1:T} | {\bm F}_{1:T}, {\bm \Lambda}, {\bm \Sigma} \right) + \log p \left( {\bm \Lambda} | {\bm \Sigma} \right) + \log p \left( {\bm \Sigma} \right) \right] + \text{const}
+			\end{align*}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{itemize}
+		\item Substituting in the expressions for the likelihood and prior for ${\bm F}_{1:T}$ we get
+			\begin{equation*}
+				\log q \left( {\bm F}_{1:T} \right) = - \frac{1}{2} \sum_{t = 1}^T {\bm F}_t^{\top} \left( {\bf I}_K + \E_{-{\bm F}} \left[ \Lambda^{\top} \bm \Sigma^{-1} \bm \Lambda \right] \right) {\bm F}_t + \sum_{t = 1}^T {\bf X}_t^{\top} \E_{-{\bm F}} \left[ {\bm \Sigma}^{-1} {\bm \Lambda} \right] {\bm F}_t + \text{const}
+				\end{equation*}
+		\item The equation above is Gaussian wrt ${\bm F}_t$. Thus,
+			\begin{equation*}
+				q \left( {\bm F}_{1:T} \right) = \prod_{t = 1}^T \mathcal{N} \left( {\bm F}_t \,|\, {\bf m}_{{\bm F} t}, {\bf P}_{\bm F} \right) 
+			\end{equation*}
+			where
+			\begin{align*}
+				{\bf P}_{\bm F}^{-1} &= {\bf I}_{K} + \sum_{n = 1}^N \E_{{\bm \Sigma}} \left[ \frac{1}{\sigma^2_n} \right] \E_{{\bm \Lambda}} \left[ {\bm \lambda}_n {\bm \lambda}_n^{\top} \right] \\
+				{\bf m}_{{\bm F} t} &= {\bf P}_{\bm F} \, \E_{{\bm \Sigma}} \left[ {\bm \Sigma}^{-1} \right] \E_{{\bm \Lambda}} \left[ {\bm \Lambda} \right] {\bm X}_t
+			\end{align*}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{itemize}
+		\item Proceeding in a similar way, we have that
+			\begin{align*}
+				q(\bm \Lambda) &= \prod_{n = 1}^N \mathcal{N} \left( {\bm \lambda}_n \,|\, {\bf m}_{{\bm \lambda} n}, {\bf P}_{{\bm \lambda} n} \right) \\
+				q({\bm \Sigma}) &= \prod_{n = 1}^N \text{Scale-inv-}\chi^2 \left( \sigma_n^2 \,|\, \nu_{\sigma}, \tau_n^2 \right)
+			\end{align*}
+			where
+			\begin{align*}
+				{\bf P}_{\bm \lambda n}^{-1} &= \E_{{\bm \Sigma}} \left[ \frac{1}{\sigma_n^2} \right] \left( {\bf I}_{K} + \sum_{t = 1}^T \E_{{\bm F}} \left[ {\bm F}_t {\bm F}_t^{\top} \right] \right) \\
+				{\bf m}_{\bm \lambda n} &= {\bf P}_{\bm \lambda n}  \E_{{\bm \Sigma}} \left[ \frac{1}{\sigma_n^2} \right] \sum_{t = 1}^T X_{nt} \E_{{\bm F}} \left[ {\bm F}_t \right] \\
+				\nu_{\sigma} &= T + \nu_0 \\
+				\nu_{\sigma} \tau_n^2 &= \nu_0 \tau_0^2 + \sum_{t = 1}^T \left[ X_{nt}^2 - 2 X_{nt} \E_{{\bm \Lambda}} \left[ {\bm \lambda}_n \right]^{\top} \E_{{\bm F}} \left[ {\bm F}_t \right] + \tr \left[ \E_{{\bm \Lambda}} \left[ {\bm \lambda}_n {\bm \lambda}_n^{\top} \right] \E_{{\bm F}} \left[ {\bm F}_t {\bm F}_t^{\top} \right] \right] \right]
+			\end{align*}
+	\end{itemize}
 \end{frame}
 
 \section{Future Work}

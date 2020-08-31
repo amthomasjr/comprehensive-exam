@@ -1,10 +1,12 @@
 \defcounter {refsection}{0}\relax 
-\beamer@slide {posterior}{16}
+\beamer@slide {posterior}{19}
 \defcounter {refsection}{0}\relax 
-\beamer@slide {marginal.evidence}{16}
+\beamer@slide {marginal.evidence}{19}
 \defcounter {refsection}{0}\relax 
-\beamer@slide {objective}{19}
+\beamer@slide {objective}{22}
 \defcounter {refsection}{0}\relax 
-\beamer@slide {ELBO}{21}
+\beamer@slide {ELBO}{24}
 \defcounter {refsection}{0}\relax 
-\beamer@slide {new.objective}{22}
+\beamer@slide {new.objective}{25}
+\defcounter {refsection}{0}\relax 
+\beamer@slide {new.objective}{31}
