@@ -1,5 +1,4 @@
 \documentclass[10pt, compress, notheorems, aspectratio=169]{beamer}
-
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 \usepackage{amsthm, amsmath, mathrsfs, amsfonts, bm, mathtools}
@@ -149,20 +148,24 @@
 
 \begin{frame}
 	\frametitle{Factor Analysis}
-	\textbf{Factor Analysis} (FA) is a method that assumes that the covariance structure of a set of observations can be described in terms of a linear combination of unobservable (latent) variables called factors. 
-	\bigskip
-	
-	Typical uses of FA:
-	\begin{enumerate}
-		\item Dimension reduction: explains covariation between $N$ variables using $K < N$ factors
-		\item Data interpretation: finds factors that explain the covariation
-		\item Theory testing: tests whether a hypothesized factor structure fits observed data
-	\end{enumerate}
+	\begin{itemize}
+		\item \textbf{Factor Analysis} (FA) is a method that assumes that the covariance structure of a set of observations can be described in terms of a linear combination of unobservable (latent) variables called factors \bigskip 
+		\item Typical uses of FA:
+			\begin{enumerate}
+				\item Dimension reduction: explains covariation between $N$ variables using $K < N$ factors
+				\item Data interpretation: finds factors that explain the covariation
+				\item Theory testing: tests whether a hypothesized factor structure fits observed data
+			\end{enumerate}
+	\end{itemize}
 \end{frame}
 
 \begin{frame}
-	\frametitle{Factor Analysis}
-	FA can be extended to time series data. 
+	\frametitle{Time Series Factor Analysis}
+	\begin{itemize}
+		\item FA can be extended to time series data
+		\item 
+	\end{itemize}
+	
 	For the remainder of the presentation we will assume that we are working with time series data.
 	\bigskip
 	
@@ -174,7 +177,7 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Factor Analysis}
+	\frametitle{Time Series Factor Analysis}
 	The measurement equation that relates the observations to the factors is given by
 	\begin{equation}
 		{\bm X}_t = {\bm \Lambda} {\bm F}_t + {\bm e}_t
@@ -293,18 +296,7 @@
 \begin{frame}
 	\frametitle{Hierarchical Dynamic Factor Model}
 	From \cite{moenchDynamicHierarchicalFactor2013}, this posterior distribution of the factors and model parameters is estimated via a Gibbs sampler.
-	The main steps are:
-	\begin{enumerate}
-		\item Organize data into blocks 
-		\item Get initial values for $\left\{ {\bm F}_t : t = 1, \ldots, T \right\}$ and $\left\{ {\bm G}_{bt} : b =  1, \ldots, B,  t = 1, \ldots, T \right\}$ via principal components
-		\item Use the initial values for $\left\{ {\bm F}_t \right\}$ and $\left\{ {\bm G}_{bt} \right\}$ to obtain initial values for ${\bm \Lambda}$, ${\bm \Psi}$, and ${\bm \Sigma}$
-		\item Conditional on ${\bm \Lambda}, {\bm \Psi}, {\bm \Sigma}, \left\{ {\bm F}_t \right\}$ and data draw $\left\{ {\bm G}_{bt} \right\}$
-		\item Conditional on ${\bm \Lambda}, {\bm \Psi}, {\bm \Sigma}, \left\{ {\bm G}_{bt} \right\}$ and data draw $\left\{ {\bm F}_t \right\}$
-		\item Conditional on $\left\{ {\bm F}_t \right\}, \left\{ {\bm G}_{bt} \right\}$ and data draw ${\bm \Lambda}, {\bm \Psi}, {\bm \Sigma}$
-	\end{enumerate}
-\end{frame}
-
-\begin{frame}
+	The main steps are outlined:
 	\begin{algorithm}[H]
 		\SetKwInput{Input}{Input}
 		\SetKwInput{Output}{Output}
@@ -434,7 +426,7 @@
 	\frametitle{Mean-Field Assumption}
 	Interestingly, under the mean-field assumption, the optimization problem for  a single $q_m$ has the solution:
 	\begin{equation}
-		q_m \left( {\bm Z}_m \right) = \frac{ \exp \left\{ \E_{q_{-m}} \left[ \log p \left( {\bm X}, {\bm Z} \right) \right] \right\} }{ \int \exp \left\{ \E_{q_{-m}} \left[ \log p \left( {\bm X}, {\bm Z} \right) \right] \right\} \,d{\bm Z}_m }
+		q_m \left( {\bm Z}_m \right) = \frac{ \exp \left\{ \E_{-m} \left[ \log p \left( {\bm X}, {\bm Z} \right) \right] \right\} }{ \int \exp \left\{ \E_{-m} \left[ \log p \left( {\bm X}, {\bm Z} \right) \right] \right\} \,d{\bm Z}_m }
 	\end{equation}
 	This establishes what is called the \textbf{coordinate ascent variational inference} algorithm.
 \end{frame}
@@ -452,7 +444,7 @@
 		\Initialize{Variational densities $q_m \left( {\bm Z}_m \right)$}
 		\While{the ELBO has not converged}{
 			\For{$m \in \left\{ 1, 2, \ldots, M \right\}$}{
-				Set  $q_m \left( {\bm Z}_m \right) \propto \exp \left\{ \E_{q_{-m}} \left[ \log p \left( {\bm X}, {\bm Z} \right) \right] \right\}$\;
+				Set  $q_m \left( {\bm Z}_m \right) \propto \exp \left\{ \E_{-m} \left[ \log p \left( {\bm X}, {\bm Z} \right) \right] \right\}$\;
 			}
 			Compute $\operatorname{ELBO} \left( q \right)$
 	  	}
@@ -553,11 +545,12 @@
 				q({\bm \Sigma}) &= \prod_{n = 1}^N \text{Scale-inv-}\chi^2 \left( \sigma_n^2 \,|\, \nu_{\sigma}, \tau_n^2 \right)
 			\end{align*}
 			where
+			\vspace{-1em}
 			\begin{align*}
-				{\bf P}_{\bm \lambda n}^{-1} &= \E_{{\bm \Sigma}} \left[ \frac{1}{\sigma_n^2} \right] \left( {\bf I}_{K} + \sum_{t = 1}^T \E_{{\bm F}} \left[ {\bm F}_t {\bm F}_t^{\top} \right] \right) \\
+				{\bf P}_{\bm \lambda n}^{-1} &= \E_{{\bm \Sigma}} \left[ \frac{1}{\sigma_n^2} \right] \left( T \, {\bf I}_{K} + \sum_{t = 1}^T \E_{{\bm F}} \left[ {\bm F}_t {\bm F}_t^{\top} \right] \right) \\
 				{\bf m}_{\bm \lambda n} &= {\bf P}_{\bm \lambda n}  \E_{{\bm \Sigma}} \left[ \frac{1}{\sigma_n^2} \right] \sum_{t = 1}^T X_{nt} \E_{{\bm F}} \left[ {\bm F}_t \right] \\
-				\nu_{\sigma} &= T + \nu_0 \\
-				\nu_{\sigma} \tau_n^2 &= \nu_0 \tau_0^2 + \sum_{t = 1}^T \left[ X_{nt}^2 - 2 X_{nt} \E_{{\bm \Lambda}} \left[ {\bm \lambda}_n \right]^{\top} \E_{{\bm F}} \left[ {\bm F}_t \right] + \tr \left[ \E_{{\bm \Lambda}} \left[ {\bm \lambda}_n {\bm \lambda}_n^{\top} \right] \E_{{\bm F}} \left[ {\bm F}_t {\bm F}_t^{\top} \right] \right] \right]
+				\nu_{\sigma} &= T + \nu_0\\
+				\nu_{\sigma} \tau_n^2 &= \nu_0 \tau_0^2 + \E_{{\bm \Lambda}} \left[ {\bm \lambda}_n^{\top} {\bm \lambda}_n \right] + \sum_{t = 1}^T \left[ X_{nt}^2 - 2 X_{nt} \E_{{\bm \Lambda}} \left[ {\bm \lambda}_n \right]^{\top} \E_{{\bm F}} \left[ {\bm F}_t \right] + \tr \left[ \E_{{\bm \Lambda}} \left[ {\bm \lambda}_n {\bm \lambda}_n^{\top} \right] \E_{{\bm F}} \left[ {\bm F}_t {\bm F}_t^{\top} \right] \right] \right]
 			\end{align*}
 	\end{itemize}
 \end{frame}
