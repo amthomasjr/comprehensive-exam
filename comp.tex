@@ -27,6 +27,7 @@
 \DeclareMathOperator*{\argmax}{arg\,max}
 \DeclareMathOperator*{\argmin}{arg\,min}
 \DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\rank}{rank} 
 
 % \hypersetup{colorlinks=true} % Enable colored hyperlinks
 
@@ -130,13 +131,13 @@
 	\begin{enumerate}
 		\item Build a model based on data $\bm X$ and parameters $\bm \Theta = \left\{ {\bm \Theta}_1, {\bm \Theta}_2 \right\}$
 			\begin{itemize}
-				\item Likelihood: $p \left( {\bm X} | {\bm \Theta} \right)$
-				\item Prior: $p \left( {\bm \Theta}\right)$
+				\item[--] Likelihood: $p \left( {\bm X} | {\bm \Theta} \right)$
+				\item[--] Prior: $p \left( {\bm \Theta}\right)$
 			\end{itemize}
 		\item Compute the posterior
 			\begin{itemize}
-				\item Posterior: $$p \left( {\bm \Theta} | {\bm X} \right) = \frac{ p \left( {\bm X} | {\bm \Theta} \right) p \left( {\bm \Theta} \right) }{ p \left( {\bm X} \right)}$$
-				\item Report summaries, e.g. posterior expectations
+				\item[--] Posterior: $$p \left( {\bm \Theta} | {\bm X} \right) = \frac{ p \left( {\bm X} | {\bm \Theta} \right) p \left( {\bm \Theta} \right) }{ p \left( {\bm X} \right)}$$
+				\item[--] Report summaries, e.g. posterior expectations
 				$$\E \left[ h( {\bm \Theta} ) | {\bm X} \right]$$
 				or marginal posterior expectations
 				$$\E \left[ h( {\bm \Theta}_i ) | {\bm X} \right]$$	
@@ -149,12 +150,38 @@
 \begin{frame}
 	\frametitle{Factor Analysis}
 	\begin{itemize}
-		\item \textbf{Factor Analysis} (FA) is a method that assumes that the covariance structure of a set of observations can be described in terms of a linear combination of unobservable (latent) variables called factors \bigskip 
+		\item \textbf{Factor Analysis} (FA) is a method that assumes that the covariance structure of a set of cross-sectional observations can be described in terms of a linear combination of latent variables called factors
+		\item A sample of $P$ observations are related to set of factors through the equation
+			\begin{equation}
+				{\bm X}_i = {\bm \Lambda} {\bm F}_i + {\bm e}_i, \qquad i = 1, \ldots, P
+			\end{equation}
+			where 
+			\begin{itemize}
+				\item[--] ${\bm X}_i = \left(X_{1i}, \ldots, X_{Ni} \right)^{\top}$ denotes a vector of observations for variable $i$
+				\item[--] ${\bm F}_i = \left(F_{1i}, \ldots, F_{Ki} \right)^{\top}$ denotes a vector of factors for variable $i$
+				\item[--] ${\bm e}_i = \left(e_{1i}, \ldots, e_{Ni} \right)^{\top}$ denotes a vector of measurement errors and idiosyncratic (unique) factors for variable $i$
+				\item[--] ${\bm \Lambda} = \left[ \lambda_{nk} \right]_{N \times K}$ denotes a matrix of factor loadings
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+\begin{frame}
+	\begin{itemize}
+		\item The following assumptions are typically made in FA:			
+			\begin{enumerate}
+				\item $\rank \left( {\bm \Lambda} \right) = K$ 
+				\item $\E \left[ {\bm X}_i \right] = \E \left[ {\bm e_i} \right] ={\bf 0}_N$ and $\E \left[ {\bm F_i} \right] ={\bf 0}_K \quad \forall i$
+				\item $\Var \left( {\bm F}_i \right) = {\bf I}_K$ and $\Var \left( {\bm e}_i \right) = {\bm \Sigma}$ where ${\bm \Sigma} = \text{diag} \left( \sigma_1^2, \ldots, \sigma_N^2 \right) \quad \forall i$
+				\item $\Cov \left( {\bm F}_i, {\bm e}_i \right) = {\bf 0}_{K \times N} \quad \forall i$
+			\end{enumerate}
+		\item Under these assumptions it follows that 
+			\begin{equation*}
+				\Var \left( {\bm X}_i \right)= {\bm \Lambda} {\bm \Lambda}^{\top} + {\bm \Sigma} \quad \forall i
+			\end{equation*}
 		\item Typical uses of FA:
 			\begin{enumerate}
-				\item Dimension reduction: explains covariation between $N$ variables using $K < N$ factors
-				\item Data interpretation: finds factors that explain the covariation
-				\item Theory testing: tests whether a hypothesized factor structure fits observed data
+				\item Dimension reduction: explain the covariation between $N$ variables using $K < N$ factors
+				\item Data interpretation: find factors that explain the covariation
+				\item Theory testing: test whether a hypothesized factor structure fits observed data
 			\end{enumerate}
 	\end{itemize}
 \end{frame}
@@ -162,127 +189,124 @@
 \begin{frame}
 	\frametitle{Time Series Factor Analysis}
 	\begin{itemize}
-		\item FA can be extended to time series data
-		\item 
-	\end{itemize}
-	
-	For the remainder of the presentation we will assume that we are working with time series data.
-	\bigskip
-	
-	For a sample of $T$ time periods we have the following:
-	\begin{itemize}
-		\item ${\bm F}_t = \left( F_{1t}, \ldots, F_{Kt} \right)^{\top}$ denotes the factors
-		\item ${\bm X}_t = \left( X_{1t}, \ldots, X_{Nt} \right)^{\top}$ denotes the observations
-	\end{itemize}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Time Series Factor Analysis}
-	The measurement equation that relates the observations to the factors is given by
-	\begin{equation}
-		{\bm X}_t = {\bm \Lambda} {\bm F}_t + {\bm e}_t
-	\end{equation}
-	where
-	\begin{itemize}
-		\item ${\bm X}_t = \left( X_{1t}, \ldots, X_{Nt} \right)^{\top}$ denotes a vector of observations
-		\item ${\bm \Lambda} = \left[ \lambda_{nk} \right]_{N \times K}$ denotes a matrix of factor loadings that act as weights
-		\item ${\bm F}_t = \left( F_{1t}, \ldots, F_{Kt} \right)^{\top}$ denotes a vector of factors
-		\item ${\bm e}_t$ is a vector of measurement errors, disturbances, and idiosyncratic (unique) factors
+		\item In \cite{gilbert2005time} FA is extended to time series data as \textbf{time series factor analysis} (TSFA)
+		\item A sample of $T$ time series observations are related to the factors through the equation
+			\begin{equation}
+				{\bm X}_t = {\bm \Lambda} {\bm F}_t + {\bm e}_t \qquad t = 1, \ldots, T
+			\end{equation}
+			where
+			\begin{itemize}
+				\item[--] ${\bm X}_t = \left( X_{1t}, \ldots, X_{Nt} \right)^{\top}$ denotes a vector of observations at time $t$
+				\item[--] ${\bm F}_t = \left( F_{1t}, \ldots, F_{Kt} \right)^{\top}$ denotes a vector of factors at time $t$
+				\item[--] ${\bm e}_t$ is a vector of measurement errors and idiosyncratic factors at time $t$
+				\item[--] ${\bm \Lambda} = \left[ \lambda_{nk} \right]_{N \times K}$ denotes a matrix of factor loadings
+			\end{itemize}
 	\end{itemize}
 \end{frame}
 
 \subsection{Dynamic Factor Analysis}
 \begin{frame}
 	\frametitle{Dynamic Factor Analysis}
-	\textbf{Dynamic factor models} allow the factors to not only affect the observations contemporaneously, but also through their lags:
-	\begin{equation}
-		{\bm X}_t = {\bm \Lambda} \left( L \right) {\bm F}_t + {\bm \epsilon}_t
-	\end{equation}
-	where 
-	\begin{equation*}
-		{\bm \Lambda} \left( L \right) = {\bm \Lambda}_0 + {\bm \Lambda}_1 L + \cdots + {\bm \Lambda}_s L^s
-	\end{equation*}
-	is a distributed lag matrix polynomial of order $s$ in the lag operator $L$ and
-	\begin{equation*}
-		L^s {\bm F}_t = {\bm F}_{t-s}.
-	\end{equation*}
-	The observation equation can be expressed instead as
-	\begin{equation*}
-		{\bm X}_t = {\bm \Lambda}_0 {\bm F}_t + {\bm \Lambda}_1 {\bm F}_{t-1} + \cdots + {\bm \Lambda}_s {\bm F}_{t-s} + {\bm \epsilon}_t
-	\end{equation*}
+	\begin{itemize}
+		\item In \textbf{dynamic factor analysis} (DFA) the factors are assumed to not only affect the observations contemporaneously, but affect them through their lags as well:
+			\begin{equation}
+				X_{nt} = {\bm \lambda}^n \left( L \right) {\bm F}_t + {\bm e}_t \quad n = 1, \ldots, N
+			\end{equation}
+			where 
+			\begin{equation*}
+				{\bm \lambda}^n \left( L \right) = {\bm \lambda}^n_0 + {\bm \lambda}^n_1 L + \cdots + {\bm \lambda}^n_q L^q
+			\end{equation*}
+			\begin{equation*}
+				L^s {\bm F}_t = {\bm F}_{t-s} \quad \forall s \geq 0
+			\end{equation*}
+			is a distributed lag polynomial of factor loadings in the lag operator $L$ for the $n$th series
+	\end{itemize}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Dynamic Factor Analysis}
-	The factors are usually assumed to follow a vector autoregressive process:
-	\begin{equation}
-		{\bm \Phi} \left( L \right) {\bm F}_t = {\bm \varepsilon}_t
-	\end{equation}
-	where 
-	\begin{equation*}
-		{\bm \Phi} \left( L \right) = {\bf I}_K - {\bm \Phi}_1 L - \cdots  - {\bm \Phi}_p L^p
-	\end{equation*}
-	is a matrix polynomial of autoregressive coefficients in the lag operator $L$.
+	\begin{itemize}
+		\item In DFA the factors are modeled as a time series process
+		\item The time series process is commonly taken to be a vector autoregressive process, i.e.
+			\begin{equation}
+				{\bm \Psi} \left( L \right) {\bm F}_t = {\bm \varepsilon}_t
+			\end{equation}
+			where 
+			\begin{equation*}
+				{\bm \Psi} \left( L \right) = {\bf I}_K - {\bm \Psi}_1 L - \cdots  - {\bm \Psi}_p L^p
+			\end{equation*}
+			is a matrix polynomial of autoregressive coefficients in the lag operator $L$
+	\end{itemize}
 \end{frame}
 
 \section{Hierarchical Dynamic Factor Analysis}
 
 \begin{frame}
 	\frametitle{Hierarchical Dynamic Factor Model}
-	In \cite{moenchDynamicHierarchicalFactor2013}, the authors generalize the two-level dynamic factor model by positing that for each $t$, the $n$th series in a given block $b$, denoted by $ X_{bnt}$, has three sources of variation:
-	\begin{enumerate}
-		\item idiosyncratic
-		\item block-specific
-		\item common
-	\end{enumerate}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Hierarchical Dynamic Factor Model}
-	A three-level representation of the data is given as 
-	\begin{align}
-		X_{bnt} &= {\bm \lambda}^n_{G.b} \left( L \right) {\bm G}_{bt} + e_{Xbnt} \\
-		{\bm G}_{bt} &= {\bm \Lambda}_{F.b} \left( L \right) {\bm F}_t + {\bm e}_{Gbt} \\
-		{\bm \Psi}_F \left( L \right) {\bm F}_t &= {\bm \epsilon}_{Ft},
-	\end{align}
-	where
 	\begin{itemize}
-		\item ${\bm \lambda}^n_{G.b} \left( L \right)$ denotes a distributed lag polynomial of block-level factor loadings
-		\item ${\bm \Lambda}_{F.b} \left( L \right)$ denotes a distributed lag matrix polynomial of common factor loadings
-		\item ${\bm G}_{bt} = \left( G_{b1t}, \ldots, G_{bK_{Gb}t} \right)^{\top}$ denotes the block-level factors
-		\item ${\bm F}_t = \left( F_{1t}, \ldots, F_{K_F t} \right)^{\top}$ denotes the common factors
+		\item In \cite{moenchDynamicHierarchicalFactor2013}, the authors generalize the dynamic factor model by positing that for each $t$, the $n$th series in a given block $b$, denoted by $ X_{bnt}$, has three sources of variation:
+			\begin{enumerate}
+				\item idiosyncratic
+				\item block-specific
+				\item common
+			\end{enumerate}
+		\tiem
 	\end{itemize}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Hierarchical Dynamic Factor Model}
-	For some blocks, it may be appropriate to break up the data into subblocks, which adds another source of variation.
-	Let $Z_{bsnt}$ be the $n$th series in subblock $s$ of block $b$.
-	A four-level representation of the subblock data is given as
-	\begin{align*}
-		Z_{bsnt} &= {\bm \lambda}^n_{H.bs} \left( L \right) {\bm H}_{bst} + e_{Zbsnt} \\
-		{\bm H}_{bst} &= {\bm \Lambda}_{G.bs} \left( L \right) {\bm G}_{bt} + {\bm e}_{Hbst} \\
-		{\bm G}_{bt} &= {\bm \Lambda}_{F.b} \left( L \right) {\bm F}_t + {\bm e}_{Gbt} \\
-		{\bm \Psi}_F \left( L \right) {\bm F}_t &= {\bm \epsilon}_{Ft}
-	\end{align*}	
-	where
 	\begin{itemize}
-		\item ${\bm \lambda}^n_{H.bs} \left( L \right)$ denotes a distributed lag polynomial of subblock-level factor loadings
-		\item ${\bm \Lambda}_{G.bs} \left( L \right)$ denotes a distributed lag matrix polynomial of block-level factor loadings
-		\item ${\bm H}_{bst} = \left( H_{bs1t}, \ldots, H_{bsK_{Hbs}t} \right)^{\top}$ denotes the subblock-level factors
+		\item A three-level representation of the data for $b = 1, \ldots, B$ is given as 
+			\begin{align}
+				X_{bnt} &= {\bm \lambda}^n_{G.b} \left( L \right) {\bm G}_{bt} + e_{Xbnt} \\
+				{\bm G}_{bt} &= {\bm \Lambda}_{F.b} \left( L \right) {\bm F}_t + {\bm e}_{Gbt} \\
+				{\bm \Psi}_F \left( L \right) {\bm F}_t &= {\bm \epsilon}_{Ft},
+			\end{align}
+			where
+			\begin{itemize}
+				\item[--] ${\bm \lambda}^n_{G.b} \left( L \right)$ denotes a distributed lag polynomial of block-level factor loadings
+				\item[--] ${\bm \Lambda}_{F.b} \left( L \right)$ denotes a distributed lag matrix polynomial of common factor loadings
+				\item[--] ${\bm G}_{bt} = \left( G_{b1t}, \ldots, G_{bK_{Gb}t} \right)^{\top}$ denotes the block-level factors
+				\item[--] ${\bm F}_t = \left( F_{1t}, \ldots, F_{K_F t} \right)^{\top}$ denotes the common factors
+			\end{itemize}
 	\end{itemize}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Hierarchical Dynamic Factor Model}
-	The idiosyncratic components, the subblock-specific, block-specific, and common factors are assumed to be stationary, Gaussian autoregressive processes of orders $q_{Zbsn}$, $q_{Xbn}$, $q_{Hbsi}$, $q_{Gbj}$, and $q_{Fk}$, respectively, i.e.
-	\begin{alignat*}{3}
-		\psi_{Z.bsn} \left( L \right) e_{Zbsnt} &= \epsilon_{Zbsnt}, \quad & \epsilon_{Zbsnt} &\sim \mathcal{N} \left( 0, \sigma^2_{Zbsn} \right) \quad & n &= 1, \ldots, N_{bs} \\
-		\psi_{X.bn} \left( L \right) e_{Xbnt} &= \epsilon_{Xbnt}, \quad & \epsilon_{Xbnt} &\sim \mathcal{N} \left( 0, \sigma^2_{Xbn} \right) \quad & n &= 1, \ldots, N_b \\
-		\psi_{H.bsi} \left( L \right) e_{Hbsit} &= \epsilon_{Hbsit}, & \epsilon_{Hbsi} &\sim \mathcal{N} \left(0, \sigma^2_{Hbsi} \right) & i &= 1, \ldots, K_{Hbs} \\
-		\psi_{G.bj} \left( L \right) e_{Gbjt} &= \epsilon_{Gbjt}, & \epsilon_{Gbjt} &\sim \mathcal{N} \left(0, \sigma^2_{Gbj} \right) & j &= 1, \ldots, K_{Gb} \\
-		\psi_{F.k} \left( L \right) F_{kt} &= \epsilon_{Fkt}, & \epsilon_{Fkt} &\sim \mathcal{N} \left(0, \sigma^2_{Fk} \right) & k &= 1, \ldots, K_{F}
-	\end{alignat*}
+	\begin{itemize}
+		\item For some blocks, it may be appropriate to break up the data into subblocks, which adds another source of variation
+		\item Let $Z_{bsnt}$ be the $n$th series in subblock $s$ of block $b$
+		\item A four-level representation of the subblock data is given as
+			\begin{align*}
+				Z_{bsnt} &= {\bm \lambda}^n_{H.bs} \left( L \right) {\bm H}_{bst} + e_{Zbsnt} \\
+				{\bm H}_{bst} &= {\bm \Lambda}_{G.bs} \left( L \right) {\bm G}_{bt} + {\bm e}_{Hbst} \\
+				{\bm G}_{bt} &= {\bm \Lambda}_{F.b} \left( L \right) {\bm F}_t + {\bm e}_{Gbt} \\
+				{\bm \Psi}_F \left( L \right) {\bm F}_t &= {\bm \epsilon}_{Ft}
+			\end{align*}	
+			where
+			\begin{itemize}
+				\item[--] ${\bm \lambda}^n_{H.bs} \left( L \right)$ denotes a distributed lag polynomial of subblock-level factor loadings
+				\item[--] ${\bm \Lambda}_{G.bs} \left( L \right)$ denotes a distributed lag matrix polynomial of block-level factor loadings
+				\item[--] ${\bm H}_{bst} = \left( H_{bs1t}, \ldots, H_{bsK_{Hbs}t} \right)^{\top}$ denotes the subblock-level factors
+			\end{itemize}
+
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Hierarchical Dynamic Factor Model}
+	\begin{itemize}
+		\item The idiosyncratic components, the subblock-specific, block-specific, and common factors are assumed to be stationary, Gaussian autoregressive processes of orders $q_{Zbsn}$, $q_{Xbn}$, $q_{Hbsi}$, $q_{Gbj}$, and $q_{Fk}$, respectively, i.e.
+			\begin{alignat*}{3}
+				\psi_{Z.bsn} \left( L \right) e_{Zbsnt} &= \epsilon_{Zbsnt}, \quad & \epsilon_{Zbsnt} &\sim \mathcal{N} \left( 0, \sigma^2_{Zbsn} \right) \quad & n &= 1, \ldots, N_{bs} \\
+				\psi_{X.bn} \left( L \right) e_{Xbnt} &= \epsilon_{Xbnt}, \quad & \epsilon_{Xbnt} &\sim \mathcal{N} \left( 0, \sigma^2_{Xbn} \right) \quad & n &= 1, \ldots, N_b \\
+				\psi_{H.bsi} \left( L \right) e_{Hbsit} &= \epsilon_{Hbsit}, & \epsilon_{Hbsi} &\sim \mathcal{N} \left(0, \sigma^2_{Hbsi} \right) & i &= 1, \ldots, K_{Hbs} \\
+				\psi_{G.bj} \left( L \right) e_{Gbjt} &= \epsilon_{Gbjt}, & \epsilon_{Gbjt} &\sim \mathcal{N} \left(0, \sigma^2_{Gbj} \right) & j &= 1, \ldots, K_{Gb} \\
+				\psi_{F.k} \left( L \right) F_{kt} &= \epsilon_{Fkt}, & \epsilon_{Fkt} &\sim \mathcal{N} \left(0, \sigma^2_{Fk} \right) & k &= 1, \ldots, K_{F}
+			\end{alignat*}
+	\end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -295,74 +319,83 @@
 
 \begin{frame}
 	\frametitle{Hierarchical Dynamic Factor Model}
-	From \cite{moenchDynamicHierarchicalFactor2013}, this posterior distribution of the factors and model parameters is estimated via a Gibbs sampler.
-	The main steps are outlined:
-	\begin{algorithm}[H]
-		\SetKwInput{Input}{Input}
-		\SetKwInput{Output}{Output}
-		\SetKwInput{Initialize}{Initialize}
-		\SetAlgoLined
-		\DontPrintSemicolon
-		\Input{Data $\left\{ {\bm X}_{t} \right\}$}
-		\Output{Sample from posterior distribution over factors and model parameters}
-		\Initialize{ $\left\{ {\bm F}_{t} \right\}^{(0)} ,\left\{ {\bm G}_{t} \right\}^{(0)}, \left\{ {\bm \Lambda}, {\bm \Psi}, {\bm \Sigma} \right\}^{(0)}$}
-		\For{$i = 1, \ldots, M$}{
-			$\left\{ {\bm G}_{t} \right\}^{(i)} \sim \left\{ {\bm G}_{t} \right\} | \left\{ {\bm F}_t \right\}^{(i-1)}, \left\{ {\bm \Lambda}, {\bm \Psi}, {\bm \Sigma} \right\}^{(i-1)}, \left\{ {\bm X}_{t} \right\}$ \vspace{0.5em}\;
-			$\left\{ {\bm F}_{t} \right\}^{(i)} \sim \left\{ {\bm F}_{t} \right\} | \left\{ {\bm G}_{t} \right\}^{(i)}, \left\{ {\bm \Lambda}, {\bm \Psi}, {\bm \Sigma} \right\}^{(i-1)}, \left\{ {\bm X}_{t} \right\}$\vspace{0.5em}\;
-			$\left\{ {\bm \Lambda}, {\bm \Psi}, {\bm \Sigma} \right\}^{(i)} \sim {\bm \Lambda}, {\bm \Psi}, {\bm \Sigma} | \left\{ {\bm F}_{t} \right\}^{(i)}, \left\{ {\bm G}_{t} \right\}^{(i)}, \left\{ {\bm X}_{t} \right\}$\;
-		}
-	  	\Return $\left\{ \left\{ {\bm F}_t \right\}^{(i)}, \left\{ {\bm G}_{t} \right\}^{(i)}, \left\{ {\bm \Lambda}, {\bm \Psi}, {\bm \Sigma} \right\}^{(i)} \right\}_{i = 1}^M$ \;
-	 	\caption{Gibbs Sampler for a Hierarchical DFM}
-	\end{algorithm}
+	\begin{itemize}
+		\item In \cite{moenchDynamicHierarchicalFactor2013} they develop a framework to estimate the posterior distribution of the factors and model parameters
+		\item The main steps are outlined:
+			\begin{algorithm}[H]
+				\SetKwInput{Input}{Input}
+				\SetKwInput{Output}{Output}
+				\SetKwInput{Initialize}{Initialize}
+				\SetAlgoLined
+				\DontPrintSemicolon
+				\Input{Data $\left\{ {\bm X}_{t} \right\}$}
+				\Output{Sample from posterior distribution over factors and model parameters}
+				\Initialize{ $\left\{ {\bm F}_{t} \right\}^{(0)} ,\left\{ {\bm G}_{t} \right\}^{(0)}, \left\{ {\bm \Lambda}, {\bm \Psi}, {\bm \Sigma} \right\}^{(0)}$}
+				\For{$i = 1, \ldots, M$}{
+					$\left\{ {\bm G}_{t} \right\}^{(i)} \sim \left\{ {\bm G}_{t} \right\} | \left\{ {\bm F}_t \right\}^{(i-1)}, \left\{ {\bm \Lambda}, {\bm \Psi}, {\bm \Sigma} \right\}^{(i-1)}, \left\{ {\bm X}_{t} \right\}$ \vspace{0.5em}\;
+					$\left\{ {\bm F}_{t} \right\}^{(i)} \sim \left\{ {\bm F}_{t} \right\} | \left\{ {\bm G}_{t} \right\}^{(i)}, \left\{ {\bm \Lambda}, {\bm \Psi}, {\bm \Sigma} \right\}^{(i-1)}, \left\{ {\bm X}_{t} \right\}$\vspace{0.5em}\;
+					$\left\{ {\bm \Lambda}, {\bm \Psi}, {\bm \Sigma} \right\}^{(i)} \sim {\bm \Lambda}, {\bm \Psi}, {\bm \Sigma} | \left\{ {\bm F}_{t} \right\}^{(i)}, \left\{ {\bm G}_{t} \right\}^{(i)}, \left\{ {\bm X}_{t} \right\}$\;
+				}
+			  	\Return $\left\{ \left\{ {\bm F}_t \right\}^{(i)}, \left\{ {\bm G}_{t} \right\}^{(i)}, \left\{ {\bm \Lambda}, {\bm \Psi}, {\bm \Sigma} \right\}^{(i)} \right\}_{i = 1}^M$ \;
+			 	\caption{Gibbs Sampler for a Hierarchical DFM}
+			\end{algorithm}
+	\end{itemize}
 \end{frame}
 
 \section{Variational Bayesian Inference}
 
 \begin{frame}
 	\frametitle{Why Variational Bayesian Inference?}
-	Consider a model with data $\bm X$ and latent variables $\bm Z = \left\{ {\bm Z}_1, {\bm Z}_2 \right\}$.
-  		The goal is to compute the joint posterior of the latent variables given the data
-  		\begin{equation} \label{posterior}
-  			p \left( {\bm Z} | {\bm X} \right) = \frac{ p \left( {\bm X} | {\bm Z} \right) p \left( {\bm Z} \right) }{ p \left( {\bm X} \right) }
-  		\end{equation}
-  		\begin{itemize}
-  			\item Likelihood: $p \left( {\bm X} | {\bm Z} \right)$
-			\item Prior: $p \left( {\bm Z}\right)$
-			\item Evidence: $p \left( {\bm X} \right)$
-			\begin{equation} 			
-				p \left( {\bm X} \right) = \int p \left( {\bm X}, {\bm Z} \right) \, d{\bm Z} \label{marginal.evidence}
-			\end{equation}
-		\end{itemize}
+	\begin{itemize}
+		\item Consider a model with data ${\bm X}$ and latent variables ${\bm Z}$
+		\item The goal is to compute the joint posterior of the latent variables given the data
+	  		\begin{equation} \label{posterior}
+	  			p \left( {\bm Z} | {\bm X} \right) = \frac{ p \left( {\bm X} | {\bm Z} \right) p \left( {\bm Z} \right) }{ p \left( {\bm X} \right) }
+	  		\end{equation}
+ 		  	\begin{itemize}
+	  			\item[--] Likelihood: $p \left( {\bm X} | {\bm Z} \right)$
+				\item[--] Prior: $p \left( {\bm Z}\right)$
+				\item[--] Evidence: $p \left( {\bm X} \right)$
+					\begin{equation} 			
+						p \left( {\bm X} \right) = \int p \left( {\bm X}, {\bm Z} \right) \, d{\bm Z} \label{marginal.evidence}
+					\end{equation}
+			\end{itemize}
+	\end{itemize}
+	
 \end{frame}
 
 \begin{frame}
 	\frametitle{Why Variational Bayesian Inference?}
-	For complex models (\ref{posterior}) and (\ref{marginal.evidence}) typically have no closed-form.
-	As a result, the joint and marginal posteriors have to be approximated.
-	Markov chain Monte Carlo (MCMC) has been the gold standard to solve this problem.
-	\begin{enumerate}
-		\item Construct an ergodic Markov chain on $\bm Z$ whose stationary distribution is the joint posterior $p \left( {\bm Z} | {\bm X} \right)$
-		\item Sample from the chain to collect samples from the stationary distribution
-		\item Approximate the posterior with an empirical estimate constructed from a subset of the collected samples
-		\item Use the subset of collected samples to estimate expectations of interest
-	\end{enumerate}
+	\begin{itemize}
+		\item For complex models (\ref{posterior}) and (\ref{marginal.evidence}) either have no closed-form or require high-dimensional integration which causes the ``inference problem"
+		\item As a result, the joint posterior has to be approximated
+		\item Markov chain Monte Carlo (MCMC) has been the gold standard to solve this problem
+			\begin{enumerate}
+				\item Construct an ergodic Markov chain on $\bm Z$ whose stationary distribution is the joint posterior $p \left( {\bm Z} | {\bm X} \right)$
+				\item Sample from the chain to collect samples from the stationary distribution
+				\item Approximate the posterior with an empirical estimate constructed from a subset of the collected samples
+				\item Use the subset of collected samples to estimate expectations of interest
+			\end{enumerate}
+	\end{itemize}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Why Variational Bayesian Inference?}
-	A major disadvantage for MCMC is that high levels of accuracy requires a great deal of time
-	\begin{enumerate}
-		\item MCMC is typically slow, but ultimately accurate
-		\item VB is typically much faster
-	\end{enumerate}
+	\begin{itemize}
+		\item A major disadvantage for MCMC is that, while it is eventually accurate, it often takes a long time to obtain results
+		\item Variational Bayes (VB) typical obtains results much faster
+		\item While MCMC uses sampling to solve the inference problem, VB instead uses optimization
+			
+	\end{itemize}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Variational Bayesian Inference}
-	Rather than use sampling, VB uses optimization to find an approximation to the posterior.
+	
 	\begin{enumerate}
 		\item Posit a family of ``nice" approximate densities $\mathcal Q$
-		\item Find a member of that family that is ``closest" to the exact posterior, i.e.
+		\item Find a member of that family that is ``closest" to the exact posterior
+	\end{enumerate}	
 		\begin{equation}
 			q^{\star} \left( {\bm Z} \right) = \argmin_{q \left( {\bm Z} \right) \in \mathcal Q} \text{KL} \left( q \left( {\bm Z} \right) \, || \, p \left( {\bm Z} | {\bm X} \right) \right) \label{objective}
 		\end{equation}
@@ -370,7 +403,6 @@
 		\begin{equation}
 			\text{KL} \left( q \left( {\bm Z} \right) \, || \, p \left( {\bm Z} | {\bm X} \right) \right) = \E_q \left[ \log q \left( {\bm Z} \right)\right] - \E_q \left[ \log p \left( {\bm Z} | {\bm X} \right) \right]
 		\end{equation}
-	\end{enumerate}
 \end{frame}
 
 \begin{frame}

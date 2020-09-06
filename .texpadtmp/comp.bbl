@@ -19,6 +19,35 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{gilbert2005time}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{2}{}{%
+        {{hash=10b3fdd8c25c419ff6b08ad2e6ac078d}{%
+           family={Gilbert},
+           familyi={G\bibinitperiod},
+           given={Paul\bibnamedelima D},
+           giveni={P\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=900d6a577075a7cf7f2e6591ee25000b}{%
+           family={Meijer},
+           familyi={M\bibinitperiod},
+           given={Erik},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{736462b482f35d5c967cc26fe93a04c6}
+      \strng{fullhash}{736462b482f35d5c967cc26fe93a04c6}
+      \strng{bibnamehash}{736462b482f35d5c967cc26fe93a04c6}
+      \strng{authorbibnamehash}{736462b482f35d5c967cc26fe93a04c6}
+      \strng{authornamehash}{736462b482f35d5c967cc26fe93a04c6}
+      \strng{authorfullhash}{736462b482f35d5c967cc26fe93a04c6}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{University of Groningen, Research School SOM Research Report 05F10}
+      \field{title}{Time series factor analysis with an application to measuring money}
+      \field{year}{2005}
+    \endentry
     \entry{moenchDynamicHierarchicalFactor2013}{article}{}
       \name{author}{3}{}{%
         {{hash=6073212e4bde0743ef1e6058ae1b8bc6}{%

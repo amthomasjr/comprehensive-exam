@@ -1,17 +1,17 @@
 [0] Config.pm:304> INFO - This is Biber 2.14
 [0] Config.pm:307> INFO - Logfile is '/Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/.texpadtmp/comp.blg'
-[190] biber-darwin:322> INFO - === Mon Aug 31, 2020, 16:18:04
-[259] Biber.pm:415> INFO - Reading '/Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/.texpadtmp/comp.bcf'
-[460] Biber.pm:943> INFO - Found 1 citekeys in bib section 0
-[485] Biber.pm:4256> INFO - Processing section 0
-[487] Utils.pm:75> INFO - Globbing data source ''/Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/ref.bib''
-[487] Utils.pm:91> INFO - Globbed data source ''/Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/ref.bib'' to /Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/ref.bib
-[546] Biber.pm:4455> INFO - Looking for bibtex format file '/Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/ref.bib' for section 0
-[563] bibtex.pm:1653> INFO - LaTeX decoding ...
-[681] bibtex.pm:1471> INFO - Found BibTeX data source '/Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/ref.bib'
-[834] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[834] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[835] Biber.pm:4084> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[835] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
-[843] bbl.pm:652> INFO - Writing '/Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/.texpadtmp/comp.bbl' with encoding 'UTF-8'
-[846] bbl.pm:755> INFO - Output to /Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/.texpadtmp/comp.bbl
+[426] biber-darwin:322> INFO - === Fri Sep  4, 2020, 21:57:35
+[574] Biber.pm:415> INFO - Reading '/Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/.texpadtmp/comp.bcf'
+[961] Biber.pm:943> INFO - Found 2 citekeys in bib section 0
+[995] Biber.pm:4256> INFO - Processing section 0
+[996] Utils.pm:75> INFO - Globbing data source ''/Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/ref.bib''
+[996] Utils.pm:91> INFO - Globbed data source ''/Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/ref.bib'' to /Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/ref.bib
+[1038] Biber.pm:4455> INFO - Looking for bibtex format file '/Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/ref.bib' for section 0
+[1059] bibtex.pm:1653> INFO - LaTeX decoding ...
+[1180] bibtex.pm:1471> INFO - Found BibTeX data source '/Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/ref.bib'
+[1299] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1299] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1300] Biber.pm:4084> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[1300] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
+[1303] bbl.pm:652> INFO - Writing '/Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/.texpadtmp/comp.bbl' with encoding 'UTF-8'
+[1307] bbl.pm:755> INFO - Output to /Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/.texpadtmp/comp.bbl
