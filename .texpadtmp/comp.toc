@@ -11,16 +11,18 @@
 \defcounter {refsection}{0}\relax 
 \beamer@sectionintoc {2}{Hierarchical Dynamic Factor Analysis}{10}{0}{2}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {2}{1}{Data and Model Structure}{17}{0}{2}
+\beamer@subsectionintoc {2}{1}{State Space Representation}{17}{0}{2}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {2}{2}{Gibbs Sampler}{22}{0}{2}
+\beamer@subsectionintoc {2}{2}{Data and Model Structure}{20}{0}{2}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {3}{Variational Bayesian Inference}{24}{0}{3}
+\beamer@subsectionintoc {2}{3}{Gibbs Sampler}{24}{0}{2}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {3}{1}{Coordinate Ascent Variational Inference}{34}{0}{3}
+\beamer@sectionintoc {3}{Variational Bayesian Inference}{26}{0}{3}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {3}{2}{Variational Bayesian EM}{36}{0}{3}
+\beamer@subsectionintoc {3}{1}{Coordinate Ascent Variational Inference}{36}{0}{3}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {4}{Future Work}{38}{0}{4}
+\beamer@subsectionintoc {3}{2}{Variational Bayesian EM}{38}{0}{3}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {5}{References}{40}{0}{5}
+\beamer@sectionintoc {4}{Future Work}{40}{0}{4}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {5}{References}{42}{0}{5}

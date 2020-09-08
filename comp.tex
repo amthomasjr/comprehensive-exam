@@ -325,6 +325,76 @@
 	\end{itemize}	
 \end{frame}
 
+\subsection{State Space Representation}
+
+\begin{frame}
+	\frametitle{State Space Representation}
+	\begin{itemize}
+		\item Observed data (vector/matrix form):
+			\begin{align*}
+				{\bm Z}_{bst} &= {\bm \Lambda}_{H.bs} \left( L \right) {\bm H}_{bst} + {\bm e}_{Zbst} \\
+				{\bm \Psi}_{Z.bs} (L) {\bm e}_{Zbst} &= {\bm \epsilon}_{Zbst}
+			\end{align*}
+			implies that the measurement equation is
+			\begin{equation}
+				\begin{aligned}
+					{\bm \Psi}_{Z.bs} (L) {\bm Z}_{bst} &= {\bm \Psi}_{Z.bs} (L) {\bm \Lambda}_{H.bs} \left( L \right) {\bm H}_{bst} + {\bm \epsilon}_{Zbst} \\
+					\tilde{\bm Z}_{bst} &= \tilde{\bm \Lambda}_{H.bs} \vec{\bm H}_{bst} + {\bm \epsilon}_{Zbst}, \quad {\bm \epsilon}_{Zbst} \sim \mathcal{N} \left( {\bf 0}, {\bm \Sigma}_{Zbs} \right)
+				\end{aligned}
+			\end{equation}
+			with transition equation
+			\begin{equation}
+				\vec{\bm H}_{bst} = \vec{\bm \alpha}_{G.bst} + \tilde{\bm \Psi}_{Hbs} \vec{\bm H}_{bst-1} + \vec{\bm \epsilon}_{Hbst}, \quad \vec{\bm \epsilon}_{Hbst} \sim \mathcal{N} \left( {\bf 0}, {\bf 1} {\bf 1}^{\top} \otimes {\bm \Sigma}_{Hbs} \right)
+			\end{equation}
+			where ${\bm \alpha}_{G.bst} = {\bm \Psi}_{H.bs} \left( L \right) {\bm \Lambda}_{G.bs} \left( L \right) {\bm G}_{bt}$
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{State Space Representation}
+	\begin{itemize}
+		\item Subblock-level factors (vector/matrix form):
+			\begin{align*}
+				{\bm H}_{bt} &= {\bm \Lambda}_{G.b} \left( L \right) {\bm G}_{bt} + {\bm e}_{Hbt} \\
+				{\bm \Psi}_{H.b} (L) {\bm e}_{Hbt} &= {\bm \epsilon}_{Hbt}
+			\end{align*}
+			implies that the (pseudo) measurement equation is
+			\begin{equation}
+				\begin{aligned}
+					{\bm \Psi}_{H.b} (L) {\bm H}_{bt} &= {\bm \Psi}_{H.b} (L) {\bm \Lambda}_{G.b} \left( L \right) {\bm G}_{bt} + {\bm \epsilon}_{Hbt} \\
+					\tilde{\bm H}_{bt} &= \tilde{\bm \Lambda}_{G.b} \vec{\bm G}_{bt} + {\bm \epsilon}_{Hbt}, \quad {\bm \epsilon}_{Hbt} \sim \mathcal{N} \left( {\bf 0}, {\bm \Sigma}_{Hb} \right)
+				\end{aligned}
+			\end{equation}
+			with transition equation
+			\begin{equation}
+				\vec{\bm G}_{bt} = {\bm \alpha}_{F.bt} + \tilde{\bm \Psi}_{G.b} \vec{\bm G}_{bt-1} + \vec{\bm \epsilon}_{Gbt}, \quad \vec{\bm \epsilon}_{Gbt} \sim \mathcal{N} \left( {\bf 0}, {\bf 1} {\bf 1}^{\top} \otimes {\bm \Sigma}_{Gb} \right)
+			\end{equation}
+			where ${\bm \alpha}_{F.bt} = {\bm \Psi}_{G.b} \left( L \right) {\bm \Lambda}_{F.b} \left( L \right) {\bm F}_{t}$
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{State Space Representation}
+	\begin{itemize}
+		\item Block-level factors (vector/matrix form):
+			\begin{align*}
+				{\bm G}_{t} &= {\bm \Lambda}_{F} \left( L \right) {\bm F}_{t} + {\bm e}_{Gt} \\
+				{\bm \Psi}_{G} (L) {\bm e}_{Gt} &= {\bm \epsilon}_{Gt}
+			\end{align*}
+			implies that the (pseudo) measurement equation is
+			\begin{equation}
+				\begin{aligned}
+					{\bm \Psi}_{G} (L) {\bm G}_{t} &= {\bm \Psi}_{G} (L) {\bm \Lambda}_{F} \left( L \right) {\bm F}_{t} + {\bm \epsilon}_{Gt} \\
+					\tilde{\bm G}_{t} &= \tilde{\bm \Lambda}_{F} \vec{\bm F}_{t} + {\bm \epsilon}_{Gt}, \quad {\bm \epsilon}_{Gt} \sim \mathcal{N} \left( {\bf 0}, {\bm \Sigma}_{F} \right)
+				\end{aligned}
+			\end{equation}
+			with transition equation
+			\begin{equation}
+				\vec{\bm F}_{t} = \tilde{\bm \Psi}_{F} \vec{\bm F}_{t-1} + \vec{\bm \epsilon}_{Ft}, \quad \vec{\bm \epsilon}_{Gbt} \sim \mathcal{N} \left( {\bf 0}, {\bf 1} {\bf 1}^{\top} \otimes {\bm \Sigma}_{Gb} \right)
+			\end{equation}
+	\end{itemize}
+\end{frame}
+
 \subsection{Data and Model Structure}
 \begin{frame}
 	\frametitle{Data and Model Structure}
@@ -389,22 +459,13 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}
-	\frametitle{State Space Representation}
-	\begin{itemize}
-		\item Stack all variables $Z_{bsnt}$ in a subblock and pseudo-difference the idiosyncratic components $e_{Zbsnt}$ to produce
-			\begin{equation}
-				\tilde{\bm Z}_{bst} = \tilde{\bm \Lambda}_{H.bs} {\bm H}_{bst} + {\bm \epsilon}_{Zbst}, \quad {\bm \epsilon}_{Zbst} \sim \mathcal{N} \left( {\bf 0}, {\bm \Sigma}_{Zbs} \right)
-			\end{equation}
-	\end{itemize}
-\end{frame}
 
 \subsection{Gibbs Sampler}
 \begin{frame}
 	\frametitle{Gibbs Sampler}
 	\begin{itemize}
-		\item The authors implement a Gibbs sampling algorithm to obtain samples from the posterior
-		\item 50,000 draws are used as a burn-in
+		\item The authors implement a Gibbs sampling algorithm based on a degenerate linear Gaussian state-space representation of the model to obtain samples from the posterior and compute posterior means
+		\item 50,000 draws are used as a burn-in, i.e. discarded
 		\item 50,000 more draws are obtained while storing every 50th draw to obtain a posterior sample size of 1,000
 		\item The main idea of the algorithm is presented next
 	\end{itemize}
@@ -620,7 +681,7 @@
 \begin{frame}
 	\frametitle{Variational Bayesian EM}
 	\begin{itemize}
-		\item Given an i.i.d. dataset ${\bm X} = \left\{ {\bm X}_1, \ldots, {\bm X}_N \right\}$
+		\item Given an i.i.d. dataset ${\bm X} = \left\{ {\bm X}_1, \ldots, {\bm X}_N \right\}$ the $\text{ELBO} \left( q \right)$ can be maximized iteratively
 			\begin{enumerate}
 				\item The VBE step:
 					\begin{equation}
@@ -758,8 +819,17 @@
 \begin{frame}
 	\frametitle{Future Work}
 	\begin{itemize}
-		\item The main goal of the project is to develop a VB framework to handle the three and four-level model from \cite{moenchDynamicHierarchicalFactor2013}
-		\item  
+		\item Ultimate goal is to develop a VB framework to handle the three- and four-level hierarchical dynamic factor model in \cite{moenchDynamicHierarchicalFactor2013}		
+		\item Developing a VB framework according to CAVI is straightforward, but very tedious
+			\begin{itemize}
+				\item[--] Still an open problem
+			\end{itemize}
+		\item Developing a VB framework according to the VBEM using the degenerate state space representation is not as straightforward
+			\begin{itemize}
+				\item[--] The state transition covariance matrix is singular
+				\item[--] The state transition equations have time-varying intercepts
+				\item[--] Still an open problem
+			\end{itemize}
 	\end{itemize}
 \end{frame}
 
