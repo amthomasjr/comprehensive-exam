@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.8)  5 SEP 2020 21:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.8)  8 SEP 2020 02:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -979,11 +979,7 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 
 \@quotelevel=\count462
 \@quotereset=\count463
-(/Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/.texpadtmp/comp.aux
-
-LaTeX Warning: Label `new.objective' multiply defined.
-
-)
+(/Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/.texpadtmp/comp.aux)
 \openout1 = `comp.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 94.
@@ -1107,7 +1103,7 @@ Package biblatex Info: Reference segment=0 on input line 94.
 Package hyperref Warning: Option `pdfauthor' has already been used,
 (hyperref)                setting the option has no effect on input line 102.
 
-<UTA-title-page.png, id=54, 722.7pt x 542.025pt>
+<UTA-title-page.png, id=66, 722.7pt x 542.025pt>
 File: UTA-title-page.png Graphic file (type png)
 <use UTA-title-page.png>
 Package pdftex.def Info: UTA-title-page.png  used on input line 115.
@@ -1115,7 +1111,7 @@ Package pdftex.def Info: UTA-title-page.png  used on input line 115.
 [1
 
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./UTA-title-page.png>] (/Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/.texpadtmp/comp.toc)
-<123_Page_02.png, id=78, 722.7pt x 542.025pt>
+<123_Page_02.png, id=93, 722.7pt x 542.025pt>
 File: 123_Page_02.png Graphic file (type png)
 <use 123_Page_02.png>
 Package pdftex.def Info: 123_Page_02.png  used on input line 123.
@@ -1146,7 +1142,7 @@ LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inpu
  (/usr/local/texlive/2020/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mathkerncmss.
 )
-<123_Page_04.png, id=113, 722.7pt x 542.025pt>
+<123_Page_04.png, id=134, 722.7pt x 542.025pt>
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
 Package pdftex.def Info: 123_Page_04.png  used on input line 146.
@@ -1198,88 +1194,89 @@ Package pdftex.def Info: 123_Page_02.png  used on input line 242.
 ]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 254.
+Package pdftex.def Info: 123_Page_04.png  used on input line 251.
 (pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [11
 
 ]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 273.
+Package pdftex.def Info: 123_Page_04.png  used on input line 263.
 (pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [12
 
 ]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 295.
+Package pdftex.def Info: 123_Page_04.png  used on input line 282.
 (pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [13
 
 ]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 309.
+Package pdftex.def Info: 123_Page_04.png  used on input line 304.
 (pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [14
 
 ]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 317.
+Package pdftex.def Info: 123_Page_04.png  used on input line 318.
 (pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [15
 
 ]
-Overfull \hbox (20.00003pt too wide) in paragraph at lines 342--342
-[]$  
- []
-
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 342.
+Package pdftex.def Info: 123_Page_04.png  used on input line 326.
 (pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
-[16
+ [16
 
-] (/Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/.texpadtmp/comp.toc)
-File: 123_Page_02.png Graphic file (type png)
-<use 123_Page_02.png>
-Package pdftex.def Info: 123_Page_02.png  used on input line 344.
+]
+<data-structure.png, id=272, 510.90875pt x 212.795pt>
+File: data-structure.png Graphic file (type png)
+<use data-structure.png>
+Package pdftex.def Info: data-structure.png  used on input line 339.
+(pdftex.def)             Requested size: 281.00067pt x 117.0376pt.
+File: 123_Page_04.png Graphic file (type png)
+<use 123_Page_04.png>
+Package pdftex.def Info: 123_Page_04.png  used on input line 339.
 (pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [17
 
-]
+ <./data-structure.png>]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 364.
+Package pdftex.def Info: 123_Page_04.png  used on input line 360.
 (pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [18
 
 ]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 379.
+Package pdftex.def Info: 123_Page_04.png  used on input line 374.
 (pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [19
 
 ]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 389.
+Package pdftex.def Info: 123_Page_04.png  used on input line 390.
 (pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [20
 
 ]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 405.
+Package pdftex.def Info: 123_Page_04.png  used on input line 400.
 (pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [21
 
 ]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 414.
+Package pdftex.def Info: 123_Page_04.png  used on input line 411.
 (pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [22
 
@@ -1290,17 +1287,17 @@ Package pdftex.def Info: 123_Page_04.png  used on input line 426.
 (pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [23
 
-]
-File: 123_Page_04.png Graphic file (type png)
-<use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 442.
+] (/Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/.texpadtmp/comp.toc)
+File: 123_Page_02.png Graphic file (type png)
+<use 123_Page_02.png>
+Package pdftex.def Info: 123_Page_02.png  used on input line 428.
 (pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [24
 
 ]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 454.
+Package pdftex.def Info: 123_Page_04.png  used on input line 448.
 (pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [25
 
@@ -1314,87 +1311,107 @@ Package pdftex.def Info: 123_Page_04.png  used on input line 463.
 ]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 485.
+Package pdftex.def Info: 123_Page_04.png  used on input line 473.
 (pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [27
 
 ]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 502.
+Package pdftex.def Info: 123_Page_04.png  used on input line 491.
 (pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [28
 
 ]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 514.
+Package pdftex.def Info: 123_Page_04.png  used on input line 502.
 (pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [29
 
-]pdfTeX warning (ext4): destination with the same identifier (name{new.objective}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.530 \end{frame}
-                 
+]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 530.
+Package pdftex.def Info: 123_Page_04.png  used on input line 517.
 (pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [30
 
 ]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 551.
+Package pdftex.def Info: 123_Page_04.png  used on input line 531.
 (pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [31
 
 ]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 569.
+Package pdftex.def Info: 123_Page_04.png  used on input line 547.
 (pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [32
 
 ]
-Overfull \hbox (12.24913pt too wide) detected at line 587
-[]
- []
-
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 587.
+Package pdftex.def Info: 123_Page_04.png  used on input line 563.
 (pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
-[33
+ [33
 
-] (/Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/.texpadtmp/comp.toc)
-File: 123_Page_02.png Graphic file (type png)
-<use 123_Page_02.png>
-Package pdftex.def Info: 123_Page_02.png  used on input line 589.
+]
+File: 123_Page_04.png Graphic file (type png)
+<use 123_Page_04.png>
+Package pdftex.def Info: 123_Page_04.png  used on input line 575.
 (pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [34
 
 ]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 593.
+Package pdftex.def Info: 123_Page_04.png  used on input line 597.
 (pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [35
 
-] (/Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/.texpadtmp/comp.toc)
-File: 123_Page_02.png Graphic file (type png)
-<use 123_Page_02.png>
-Package pdftex.def Info: 123_Page_02.png  used on input line 594.
+]
+File: 123_Page_04.png Graphic file (type png)
+<use 123_Page_04.png>
+Package pdftex.def Info: 123_Page_04.png  used on input line 618.
 (pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [36
 
 ]
 File: 123_Page_04.png Graphic file (type png)
 <use 123_Page_04.png>
-Package pdftex.def Info: 123_Page_04.png  used on input line 598.
+Package pdftex.def Info: 123_Page_04.png  used on input line 645.
 (pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
  [37
+
+] Excluding 'comment' comment. (/Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/.texpadtmp/comp.toc)
+File: 123_Page_02.png Graphic file (type png)
+<use 123_Page_02.png>
+Package pdftex.def Info: 123_Page_02.png  used on input line 757.
+(pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
+ [38
+
+]
+File: 123_Page_04.png Graphic file (type png)
+<use 123_Page_04.png>
+Package pdftex.def Info: 123_Page_04.png  used on input line 764.
+(pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
+ [39
+
+] (/Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/.texpadtmp/comp.toc)
+File: 123_Page_02.png Graphic file (type png)
+<use 123_Page_02.png>
+Package pdftex.def Info: 123_Page_02.png  used on input line 766.
+(pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
+ [40
+
+]
+File: 123_Page_04.png Graphic file (type png)
+<use 123_Page_04.png>
+Package pdftex.def Info: 123_Page_04.png  used on input line 770.
+(pdftex.def)             Requested size: 455.24826pt x 256.08334pt.
+ [41
 
  </usr/local/texlive/2020/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>]
 \tf@nav=\write8
@@ -1406,35 +1423,31 @@ Package pdftex.def Info: 123_Page_04.png  used on input line 598.
 \tf@snm=\write10
 \openout10 = `comp.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 600.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 600.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 772.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 772.
  (/Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/.texpadtmp/comp.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 600.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 600.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 772.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 772.
 Package rerunfilecheck Info: File `comp.out' has not changed.
-(rerunfilecheck)             Checksum: 84BF75038E06625D6662A22B7B8DE2BE;594.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
+(rerunfilecheck)             Checksum: CC1A9E6D747E7361100504472F48598C;823.
 Package logreq Info: Writing requests to 'comp.run.xml'.
 \openout1 = `comp.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 27929 strings out of 480608
- 530188 string characters out of 5903631
- 1189022 words of memory out of 5000000
- 43113 multiletter control sequences out of 15000+600000
+ 27993 strings out of 480608
+ 531338 string characters out of 5903631
+ 1189174 words of memory out of 5000000
+ 43163 multiletter control sequences out of 15000+600000
  550170 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  58i,21n,67p,809b,2286s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/202
-0/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on /Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/.texpadtmp/comp.pdf (37 pages, 725894 bytes).
+</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texli
+ve/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on /Users/anthonythomasjr/Documents/GitHub/comprehensive-exam/.texpadtmp/comp.pdf (41 pages, 785096 bytes).
 PDF statistics:
- 584 PDF objects out of 1000 (max. 8388607)
- 499 compressed objects within 5 object streams
- 92 named destinations out of 1000 (max. 500000)
- 138 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 653 PDF objects out of 1000 (max. 8388607)
+ 561 compressed objects within 6 object streams
+ 105 named destinations out of 1000 (max. 500000)
+ 167 words of extra memory for PDF output out of 10000 (max. 10000000)
 

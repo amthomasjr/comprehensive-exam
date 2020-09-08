@@ -11,10 +11,16 @@
 \defcounter {refsection}{0}\relax 
 \beamer@sectionintoc {2}{Hierarchical Dynamic Factor Analysis}{10}{0}{2}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {3}{Variational Bayesian Inference}{17}{0}{3}
+\beamer@subsectionintoc {2}{1}{Data and Model Structure}{17}{0}{2}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {3}{1}{Orthogonal Factor Model}{28}{0}{3}
+\beamer@subsectionintoc {2}{2}{Gibbs Sampler}{22}{0}{2}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {4}{Future Work}{34}{0}{4}
+\beamer@sectionintoc {3}{Variational Bayesian Inference}{24}{0}{3}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {5}{References}{36}{0}{5}
+\beamer@subsectionintoc {3}{1}{Coordinate Ascent Variational Inference}{34}{0}{3}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {3}{2}{Variational Bayesian EM}{36}{0}{3}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {4}{Future Work}{38}{0}{4}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {5}{References}{40}{0}{5}

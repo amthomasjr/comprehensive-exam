@@ -18,7 +18,7 @@
 
 
 \refsection{0}
-  \datalist[entry]{nty/global//global/global}
+  \datalist[entry]{none/global//global/global}
     \entry{gilbert2005time}{article}{}
       \true{moreauthor}
       \true{morelabelname}
@@ -40,8 +40,8 @@
       \strng{authorbibnamehash}{736462b482f35d5c967cc26fe93a04c6}
       \strng{authornamehash}{736462b482f35d5c967cc26fe93a04c6}
       \strng{authorfullhash}{736462b482f35d5c967cc26fe93a04c6}
-      \field{sortinit}{G}
-      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{University of Groningen, Research School SOM Research Report 05F10}
@@ -75,8 +75,8 @@
       \strng{authorbibnamehash}{87330483205b032144bd476cf0d6a438}
       \strng{authornamehash}{87330483205b032144bd476cf0d6a438}
       \strng{authorfullhash}{87330483205b032144bd476cf0d6a438}
-      \field{sortinit}{M}
-      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{This paper uses multilevel factor models to characterize withinand between-block variations as well as idiosyncratic noise in large dynamic panels. Block-level shocks are distinguished from genuinely common shocks, and the estimated block-level factors are easy to interpret. The framework achieves dimension reduction and yet explicitly allows for heterogeneity between blocks. The model is estimated using an MCMC algorithm that takes into account the hierarchical structure of the factors. The importance of block-level variations is illustrated in a four-level model estimated on a panel of 445 series related to different categories of real activity in the United States.}
@@ -94,6 +94,34 @@
       \endverb
       \verb{file}
       \verb /Users/anthonythomasjr/Zotero/storage/IR8DKKN7/Moench et al. - 2013 - Dynamic Hierarchical Factor Models.pdf
+      \endverb
+    \endentry
+    \entry{bealVariationalAlgorithmsApproximate}{article}{}
+      \name{author}{1}{}{%
+        {{hash=342f2eed2056001f018235069ef9bc24}{%
+           family={Beal},
+           familyi={B\bibinitperiod},
+           given={Matthew\bibnamedelima James},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{342f2eed2056001f018235069ef9bc24}
+      \strng{fullhash}{342f2eed2056001f018235069ef9bc24}
+      \strng{bibnamehash}{342f2eed2056001f018235069ef9bc24}
+      \strng{authorbibnamehash}{342f2eed2056001f018235069ef9bc24}
+      \strng{authornamehash}{342f2eed2056001f018235069ef9bc24}
+      \strng{authorfullhash}{342f2eed2056001f018235069ef9bc24}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Variational {{Algorithms}} for {{Approximate Bayesian Inference}}}
+      \field{pages}{281}
+      \range{pages}{1}
+      \verb{file}
+      \verb /Users/anthonythomasjr/Zotero/storage/GQCL26N7/Beal - Variational Algorithms for Approximate Bayesian In.pdf
       \endverb
     \endentry
   \enddatalist
